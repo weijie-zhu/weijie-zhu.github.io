@@ -1,0 +1,35 @@
+```scss
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  margin: 0;
+}
+
+.photo-header {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.photo-content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.post {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.post-meta {
+  font-size: 0.8rem;
+  color: #999;
+}
+```

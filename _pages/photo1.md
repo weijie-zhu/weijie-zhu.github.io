@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Sunrise Glow"
 layout: photo
@@ -7,4 +6,3 @@ image: /assets/images/photo1.jpg
 ---
 
 A serene sunrise over the hills.
-```

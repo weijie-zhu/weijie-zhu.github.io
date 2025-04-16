@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Home"
 layout: default
@@ -8,4 +7,3 @@ layout: default
 
 [View Photos](/photo1/)
 [Read Blog](/2025-04-16-first-post/)
-```

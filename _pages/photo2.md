@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Mountain Whisper"
 layout: photo
@@ -7,4 +6,3 @@ image: /assets/images/photo2.jpg
 ---
 
 Soft mists float between quiet peaks.
-```

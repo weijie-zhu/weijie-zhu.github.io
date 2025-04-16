@@ -1,4 +1,3 @@
-```yaml
 title: "Jay Gallery"
 baseurl: "" 
 url: "https://weijie-zhu.github.io"
@@ -10,4 +9,3 @@ collections:
   pages:
     output: true
     permalink: /:title/
-```

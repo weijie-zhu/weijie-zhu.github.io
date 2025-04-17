@@ -1,0 +1,35 @@
+{{ $photos := where .Site.RegularPages "Section" "view" }}
+{{ $currentPage := . }}
+{{ $currentIndex := 0 }}
+{{ range $index, $page := $photos }}
+    {{ if eq $page $currentPage }}
+        {{ $currentIndex = $index }}
+    {{ end }}
+{{ end }}
+
+{{ $prevIndex := sub $currentIndex 1 }}
+{{ $nextIndex := add $currentIndex 1 }}
+{{ $prevPage := index $photos $prevIndex }}
+{{ $nextPage := index $photos $nextIndex }}
+
+<div class="photo-container">
+    <div class="photo-image-container">
+        {{ with .Params.image }}
+        <img src="{{ . }}" alt="{{ $.Title }}" class="photo-image">
+        {{ end }}
+    
+        {{ if $prevPage }}
+        <a href="{{ $prevPage.RelPermalink }}" class="photo-nav prev">&lt;</a>
+        {{ end }}
+        {{ if $nextPage }}
+        <a href="{{ $nextPage.RelPermalink }}" class="photo-nav next">&gt;</a>
+        {{ end }}
+    </div>
+    
+    <div class="photo-description">
+        <p>{{ .Params.location }} · {{ .Date.Format "2006-01" }}</p>
+        {{ with .Params.description }}
+        <p>{{ . }}</p>
+        {{ end }}
+    </div>
+</div> 

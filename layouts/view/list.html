@@ -1,0 +1,6 @@
+{{ define "main" }}
+{{ $photos := where .Site.RegularPages "Section" "view" }}
+{{ with index $photos 0 }}
+    {{ partial "photo.html" . }}
+{{ end }}
+{{ end }} 

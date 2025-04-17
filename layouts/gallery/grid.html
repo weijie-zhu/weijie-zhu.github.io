@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="gallery-grid-container">
+    {{ $photos := where .Site.RegularPages "Section" "view" }}
+    {{ if gt (len $photos) 0 }}
+    <div class="gallery-grid">
+        {{ range $photos }}
+        <a href="{{ .RelPermalink }}" class="gallery-item">
+            <div class="gallery-thumbnail">
+                {{ with .Params.image }}
+                <img src="{{ . }}" alt="{{ $.Title }}">
+                {{ end }}
+            </div>
+        </a>
+        {{ end }}
+    </div>
+    {{ else }}
+    <p>No photos available yet.</p>
+    {{ end }}
+</div>
+{{ end }} 

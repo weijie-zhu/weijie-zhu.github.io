@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+
+    <!-- All styles are defined here for simplicity -->
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic page layout */
+        body {
+            background-color: #000;  /* Black background */
+            color: #fff;            /* White text */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* Two-column layout container */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Left sidebar navigation */
+        .sidebar {
+            width: 200px;
+            padding: 2rem;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        /* Site title styling */
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Navigation menu styling */
+        .nav-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;  /* Space between menu items */
+        }
+
+        .nav-item {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .nav-item:hover {
+            opacity: 0.8;  /* Slight fade on hover */
+        }
+
+        /* Main content area */
+        .content {
+            flex: 1;
+            margin-left: 200px;  /* Same as sidebar width */
+            padding: 2rem;
+            background-color: #000;
+        }
+
+        /* Home page hero section */
+        .home-hero {
+            height: calc(100vh - 4rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .home-hero h1 {
+            position: relative;
+            font-size: 3rem;
+            text-align: center;
+            z-index: 1;
+            color: #fff;
+        }
+
+        /* Gallery Grid styles */
+        .gallery-grid-container {
+            padding: 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .gallery-item {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .gallery-thumbnail {
+            position: relative;
+            aspect-ratio: 3/2;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .gallery-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Single Photo styles */
+        .photo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: calc(100vh - 4rem);
+            background: #000;
+        }
+
+        .photo-image-container {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .photo-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .photo-description {
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .photo-description p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        .photo-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            z-index: 10;
+        }
+
+        .photo-nav:hover {
+            opacity: 0.7;
+        }
+
+        .photo-nav.prev {
+            left: 2rem;
+        }
+
+        .photo-nav.next {
+            right: 2rem;
+        }
+
+        /* List pages (Blog, Photos) */
+        .list-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .list-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .list-item h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .list-item a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .list-item .date {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Content pages (Blog posts, About) */
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        .post-content h1 { margin-bottom: 2rem; }
+        .post-content p { margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <!-- Two-column layout structure -->
+    <div class="container">
+        <!-- Left sidebar navigation -->
+        <nav class="sidebar">
+            <div class="nav-content">
+                <a href="/" class="site-title">{{ .Site.Title }}</a>
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="nav-item">{{ .Name }}</a>
+                {{ end }}
+            </div>
+        </nav>
+
+        <!-- Main content area -->
+        <main class="content">
+            {{ block "main" . }}{{ end }}
+        </main>
+    </div>
+</body>
+</html> 

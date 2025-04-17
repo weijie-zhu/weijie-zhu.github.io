@@ -1,0 +1,31 @@
+# Basic site configuration
+baseURL = 'https://weijie-zhu.github.io/'
+languageCode = 'en-us'
+title = "Jay"
+
+# Navigation menu items
+[menu]
+  [[menu.main]]
+    name = "Home"      # Display name
+    url = "/"          # URL to link to
+    weight = 1         # Order in menu (lowest number appears first)
+  
+  [[menu.main]]
+    name = "View"
+    url = "/view/"    # Changed from /photos/ to /view/
+    weight = 2
+  
+  [[menu.main]]
+    name = "Gallery"
+    url = "/gallery/"
+    weight = 3
+  
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 4
+  
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 5 

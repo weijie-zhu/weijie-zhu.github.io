@@ -389,41 +389,6 @@
                     }, 1500);
                 });
             }
-
-            // Touch swipe functionality for photo view
-            const photoContainer = document.querySelector('.photo-container');
-            if (photoContainer) {
-                let touchStartX = 0;
-                let touchEndX = 0;
-                const minSwipeDistance = 50; // Minimum distance for a swipe
-
-                photoContainer.addEventListener('touchstart', e => {
-                    touchStartX = e.changedTouches[0].screenX;
-                }, false);
-
-                photoContainer.addEventListener('touchend', e => {
-                    touchEndX = e.changedTouches[0].screenX;
-                    handleSwipe();
-                }, false);
-
-                function handleSwipe() {
-                    const swipeDistance = touchEndX - touchStartX;
-                    
-                    if (Math.abs(swipeDistance) >= minSwipeDistance) {
-                        // Find navigation links
-                        const prevLink = document.querySelector('.photo-nav.prev');
-                        const nextLink = document.querySelector('.photo-nav.next');
-                        
-                        if (swipeDistance > 0 && prevLink) {
-                            // Swipe right - go to previous
-                            window.location.href = prevLink.href;
-                        } else if (swipeDistance < 0 && nextLink) {
-                            // Swipe left - go to next
-                            window.location.href = nextLink.href;
-                        }
-                    }
-                }
-            }
         });
     </script>
 </head>

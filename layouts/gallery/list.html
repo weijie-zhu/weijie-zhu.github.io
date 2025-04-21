@@ -7,7 +7,15 @@
         <a href="{{ .RelPermalink }}" class="gallery-item">
             <div class="gallery-thumbnail">
                 {{ with .Params.image }}
-                <img src="{{ . }}" alt="{{ $.Title }}">
+                    {{ $original := resources.Get . }}
+                    {{ if $original }}
+                        {{ $thumbnail := $original.Fill "300x300 jpg q80" }}
+                        <img src="{{ $thumbnail.RelPermalink }}" 
+                             alt="{{ $.Title }}"
+                             loading="lazy">
+                    {{ else }}
+                        <img src="{{ . }}" alt="{{ $.Title }}">
+                    {{ end }}
                 {{ end }}
             </div>
         </a>

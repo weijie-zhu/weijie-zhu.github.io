@@ -13,5 +13,5 @@ Welcome to my personal space. This is where I share my thoughts, photos, and exp
 
 Feel free to reach out to me through the following channels:
 
-- Email: example@email.com
-- GitHub: github.com/yourusername 
+- Email: teruzz77@gmail.com
+- Wechat: 

@@ -9,7 +9,7 @@
                 {{ with .Params.image }}
                     {{ $original := resources.Get . }}
                     {{ if $original }}
-                        {{ $thumbnail := $original.Fill "300x300 jpg q80" }}
+                        {{ $thumbnail := $original.Resize "600x jpg q80" }}
                         <img src="{{ $thumbnail.RelPermalink }}" 
                              alt="{{ $.Title }}"
                              loading="lazy">

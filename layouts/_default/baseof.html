@@ -26,6 +26,7 @@
             display: flex;
             min-height: 100vh;
             flex-direction: column; /* Default for mobile */
+            padding-top: 60px; /* Space for fixed mobile nav */
         }
 
         /* Navigation styling */
@@ -34,6 +35,9 @@
             padding: 1rem;
             background-color: rgba(0, 0, 0, 0.95);
             z-index: 1000;
+            position: fixed; /* Fixed position on mobile */
+            top: 0;
+            left: 0;
         }
 
         /* Site title styling */
@@ -73,10 +77,24 @@
             width: 100%;
         }
 
+        /* Gallery Grid styles */
+        .gallery-grid-container {
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller on mobile */
+            gap: 1rem; /* Smaller gap on mobile */
+            width: 100%;
+        }
+
         /* Desktop styles */
         @media (min-width: 768px) {
             .container {
                 flex-direction: row; /* Side by side on desktop */
+                padding-top: 0; /* Remove top padding on desktop */
             }
 
             .sidebar {
@@ -101,6 +119,11 @@
             .site-title {
                 margin-bottom: 2rem;
             }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Larger on desktop */
+                gap: 1.25rem; /* Larger gap on desktop */
+            }
         }
 
         /* Rest of your existing styles */
@@ -121,19 +144,6 @@
             text-align: center;
             z-index: 1;
             color: #fff;
-        }
-
-        /* Gallery Grid styles */
-        .gallery-grid-container {
-            width: 100%;
-            padding: 1rem;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.25rem;
-            width: 100%;
         }
 
         .gallery-item {

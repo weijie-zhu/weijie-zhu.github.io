@@ -103,9 +103,40 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller on mobile */
-            gap: 1rem; /* Smaller gap on mobile */
+            grid-template-columns: repeat(2, 1fr); /* Fixed 2 columns on mobile */
+            gap: 1rem;
             width: 100%;
+        }
+
+        .gallery-item {
+            text-decoration: none;
+            color: inherit;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #111;
+            transition: transform 0.3s ease;
+            display: block;
+            aspect-ratio: 1; /* Force square aspect ratio */
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .gallery-thumbnail {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .gallery-thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* Desktop styles */
@@ -143,10 +174,10 @@
             }
 
             .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Larger on desktop */
-                gap: 2rem; /* Increased gap for desktop */
-                max-width: 1600px; /* Prevent grid from getting too wide */
-                margin: 0 auto; /* Center the grid if smaller than max-width */
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns on desktop */
+                gap: 2rem;
+                max-width: 1600px;
+                margin: 0 auto;
             }
         }
 

@@ -1,5 +1,9 @@
 {{ define "main" }}
 <!-- Hero section with background image -->
-<div class="home-hero" style="background-image: url('/images/home.jpg')">
+<div class="home-hero">
+    {{ $image := resources.Get "images/home.jpg" }}
+    {{ with $image }}
+        <img src="{{ .RelPermalink }}" alt="Home">
+    {{ end }}
 </div>
 {{ end }} 

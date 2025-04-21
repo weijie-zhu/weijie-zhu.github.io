@@ -63,10 +63,28 @@
             color: #fff;
             text-decoration: none;
             font-size: 1.1rem;
+            position: relative;
+            padding-bottom: 2px;
         }
 
-        .nav-item:hover {
-            opacity: 0.8;
+        .nav-item:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item:hover:after {
+            transform: scaleX(0.5);
+        }
+
+        .nav-item.active:after {
+            transform: scaleX(1);
         }
 
         /* Main content area */
@@ -120,76 +138,26 @@
                 margin-bottom: 2rem;
             }
 
+            .gallery-grid-container {
+                padding: 2rem;
+            }
+
             .gallery-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Larger on desktop */
-                gap: 1.25rem; /* Larger gap on desktop */
+                gap: 2rem; /* Increased gap for desktop */
+                max-width: 1600px; /* Prevent grid from getting too wide */
+                margin: 0 auto; /* Center the grid if smaller than max-width */
             }
         }
 
-        /* Rest of your existing styles */
-        /* Home page hero section */
-        .home-hero {
-            height: calc(100vh - 4rem);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .home-hero h1 {
-            position: relative;
-            font-size: 3rem;
-            text-align: center;
-            z-index: 1;
-            color: #fff;
-        }
-
-        .gallery-item {
-            text-decoration: none;
-            color: inherit;
-            border-radius: 4px;
-            overflow: hidden;
-            background-color: #111;
-            transition: transform 0.3s ease;
-            display: block;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        .gallery-thumbnail {
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-bottom: 100%;
-            overflow: hidden;
-        }
-
-        .gallery-thumbnail img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Single Photo styles */
+        /* Photo view styles */
         .photo-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: calc(100vh - 4rem);
             background: #000;
+            touch-action: none; /* Prevent default touch actions */
         }
 
         .photo-image-container {
@@ -199,12 +167,14 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            overflow: hidden; /* Prevent content overflow during swipe */
         }
 
         .photo-image {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
+            user-select: none; /* Prevent image selection during swipe */
         }
 
         .photo-description {
@@ -300,6 +270,53 @@
         .post-content h1 { margin-bottom: 2rem; }
         .post-content p { margin-bottom: 1rem; }
     </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add active class to current navigation item
+            const currentPath = window.location.pathname;
+            document.querySelectorAll('.nav-item').forEach(item => {
+                if (item.getAttribute('href') === currentPath) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Touch swipe functionality for photo view
+            const photoContainer = document.querySelector('.photo-container');
+            if (photoContainer) {
+                let touchStartX = 0;
+                let touchEndX = 0;
+                const minSwipeDistance = 50; // Minimum distance for a swipe
+
+                photoContainer.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, false);
+
+                photoContainer.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                }, false);
+
+                function handleSwipe() {
+                    const swipeDistance = touchEndX - touchStartX;
+                    
+                    if (Math.abs(swipeDistance) >= minSwipeDistance) {
+                        // Find navigation links
+                        const prevLink = document.querySelector('.photo-nav.prev');
+                        const nextLink = document.querySelector('.photo-nav.next');
+                        
+                        if (swipeDistance > 0 && prevLink) {
+                            // Swipe right - go to previous
+                            window.location.href = prevLink.href;
+                        } else if (swipeDistance < 0 && nextLink) {
+                            // Swipe left - go to next
+                            window.location.href = nextLink.href;
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="container">

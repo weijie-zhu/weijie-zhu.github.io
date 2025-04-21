@@ -192,14 +192,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: calc(100vh - 4rem);
+            min-height: 100vh;
             background: #000;
             touch-action: none; /* Prevent default touch actions */
         }
 
         .photo-image-container {
             width: 100%;
-            height: 80vh;
+            height: 88vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -216,14 +216,15 @@
 
         .photo-description {
             width: 100%;
-            padding: 1rem;
+            padding: 0.25rem;
             text-align: center;
             color: #fff;
+            margin-bottom: -1rem;
         }
 
         .photo-description p {
-            margin: 0.5rem 0;
-            font-size: 1rem;
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
         }
 
         .photo-nav {
@@ -346,6 +347,17 @@
                 object-fit: contain; /* Prevent cropping on desktop */
             }
         }
+
+        /* Add copyright text at bottom right */
+        .copyright {
+            position: fixed;
+            bottom: 0.5rem;
+            right: 1rem;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 300;
+            z-index: 10;
+        }
     </style>
 
     <script>
@@ -357,6 +369,31 @@
                     item.classList.add('active');
                 }
             });
+
+            // Disable right click on photo view pages
+            if (currentPath.startsWith('/view/')) {
+                document.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    const message = document.createElement('div');
+                    message.textContent = 'This photo is ©Weijie Zhu';
+                    message.style.position = 'fixed';
+                    message.style.left = e.pageX + 'px';
+                    message.style.top = e.pageY + 'px';
+                    message.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                    message.style.color = '#fff';
+                    message.style.padding = '8px 12px';
+                    message.style.borderRadius = '4px';
+                    message.style.fontSize = '0.8rem';
+                    message.style.zIndex = '1000';
+                    message.style.pointerEvents = 'none';
+                    document.body.appendChild(message);
+                    setTimeout(() => {
+                        message.style.opacity = '0';
+                        message.style.transition = 'opacity 0.5s ease';
+                        setTimeout(() => document.body.removeChild(message), 500);
+                    }, 1500);
+                });
+            }
 
             // Touch swipe functionality for photo view
             const photoContainer = document.querySelector('.photo-container');
@@ -408,6 +445,8 @@
 
         <main class="content">
             {{ block "main" . }}{{ end }}
+            
+            <div class="copyright">©All rights reserved.</div>
         </main>
     </div>
 </body>

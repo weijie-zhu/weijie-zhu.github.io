@@ -297,11 +297,33 @@
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.6;
-            color: #fff;
+            color: rgba(255, 255, 255, 0.85);
         }
 
-        .post-content h1 { margin-bottom: 2rem; }
-        .post-content p { margin-bottom: 1rem; }
+        /* Add these new styles for blog post date */
+        .post-date {
+            margin-top: -0.2rem;
+            margin-bottom: 2.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: right;  /* Align date to the right */
+            width: 97%;       /* Ensure full width */
+        }
+
+        .post-title {
+            margin-bottom: 0rem;
+        }
+
+        /* Add this new style for headings in post content */
+        .post-content h2 {
+            margin-bottom: 0.3rem;  /* Space below headings */
+            font-size: 1.8rem;
+        }
+
+        /* Adjust paragraph spacing */
+        .post-content p {
+            margin-bottom: 1.2rem;  /* Space between paragraphs */
+        }
+
 
         /* Home page hero section */
         .home-hero {
@@ -410,4 +432,4 @@
         </main>
     </div>
 </body>
-</html> 
+</html>

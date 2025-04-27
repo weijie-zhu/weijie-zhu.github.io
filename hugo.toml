@@ -30,3 +30,18 @@ title = "Jay"
     name = "About"
     url = "/about/"
     weight = 5 
+
+[params.social]
+  # Icons will be displayed in the order listed here
+  [[params.social.list]]
+    icon = "facebook"
+    url = "https://facebook.com/teruzz77"
+  [[params.social.list]]
+    icon = "instagram"
+    url = "https://instagram.com/teruzz77"
+  [[params.social.list]]
+    icon = "youtube"
+    url = "https://www.youtube.com/@JUJU-lh1ov"
+  [[params.social.list]]
+    icon = "bilibili"
+    url = "https://space.bilibili.com/142718963/upload/video"

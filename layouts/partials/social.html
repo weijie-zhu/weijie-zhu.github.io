@@ -1,0 +1,11 @@
+<div class="social-links">
+  {{ range .Site.Params.social.list }}
+    {{ $icon := .icon }}
+    <a href="{{ .url }}" target="_blank" rel="noopener">
+      {{ $image := resources.Get (printf "icons/%s.png" $icon) }}
+      {{ with $image }}
+        <img src="{{ .RelPermalink }}" alt="{{ $icon }}">
+      {{ end }}
+    </a>
+  {{ end }}
+</div>

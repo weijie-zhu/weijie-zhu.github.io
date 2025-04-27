@@ -300,6 +300,38 @@
             color: rgba(255, 255, 255, 0.85);
         }
 
+        /* Social links styling */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;  /* Increased gap between icons */
+            margin: 2rem 0;
+        }
+
+        .social-links img {
+            width: 32px;  /* Increased from default size */
+            height: 32px;  /* Increased from default size */
+            opacity: 0.8;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover img {
+            opacity: 1;
+            transform: scale(1.1);  /* Slight scale up on hover */
+        }
+
+        /* Responsive adjustments for mobile */
+        @media (max-width: 768px) {
+            .social-links img {
+                width: 28px;  /* Slightly smaller on mobile */
+                height: 28px;
+            }
+            
+            .social-links {
+                gap: 1.5rem;  /* Smaller gap on mobile */
+            }
+        }
+
         /* Add these new styles for blog post date */
         .post-date {
             margin-top: -0.2rem;

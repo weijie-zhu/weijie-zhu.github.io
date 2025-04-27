@@ -300,6 +300,25 @@
             color: rgba(255, 255, 255, 0.85);
         }
 
+        /* Add these styles for better list formatting */
+        .post-content ul {
+            padding-left: 0;  /* Remove default padding */
+            margin-left: 1.5rem;  /* Add consistent margin */
+            list-style-position: outside;  /* Keep bullets outside */
+        }
+
+        .post-content ul li {
+            margin-bottom: 0.5rem;  /* Space between list items */
+        }
+
+        .post-content h1 {
+            margin-bottom: 1.5rem;  /* Space after headings */
+        }
+
+        .post-content p + ul {
+            margin-top: 1rem;  /* Space between paragraph and list */
+        }
+
         /* Social links styling */
         .social-links {
             display: flex;

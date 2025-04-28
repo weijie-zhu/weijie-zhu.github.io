@@ -1,3 +1,6 @@
+---
+title: "About"
+---
 # About me
 Welcome to my personal space. This is where I share my thoughts, photos, and experiences.
 

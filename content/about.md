@@ -1,7 +1,7 @@
 ---
 title: "About"
 ---
-# About me
+
 Welcome to my personal space. This is where I share my thoughts, photos, and experiences.
 
 **The initial motivation for building this personal website:** I used to hardly express myself, sometimes because things were tricky to articulate, sometimes because I underevaluate them. Now I think expressing my personal opinions is way more important than I thought, so I choose to do it from now on, no matter big or small, significant or trivial, as long as I hold them, show them. 

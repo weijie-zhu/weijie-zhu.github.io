@@ -2,6 +2,7 @@
 title: "A relationship of what kind do I really want?"
 date: 2025-05-10
 description: "Thoughts occur today."
+author: "Jay"
 ---
 
 I ended a relationship with a boy several days ago. He is gay, I knew this from the very begining, and I told him i am not gay on the first day we met. So, when he got attached to me later, I thought he would treat me like a normal friend and refrain from any sexual intentions. I was wrong. About one week after we knew each other, he proposed traveling to my home city during the upcoming May Day holiday, which was only a few days away. I was okay with that, but was suddenly suprised when he accidentally chose the nearst hotel to my home -- I guess he didn't know where my home was. I was not prepared to bring him to my home, so I had only planned to take him to some public places and hang out, just as new friends usually do. Today, while I am recalling what happened between us and how my thoughts changed during that period, a question occurs to me. A relationship of what kind do I need or want?

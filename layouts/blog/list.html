@@ -3,8 +3,11 @@
     {{ range .Pages }}
     <div class="list-item">
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        <div class="date">{{ .Date.Format "January 2, 2006" }}</div>
+        <div class="date">
+            {{ .Date.Format "January 2, 2006" }}
+            {{ if .Params.author }} • {{ .Params.author }}{{ end }}
+        </div>
     </div>
     {{ end }}
 </div>
-{{ end }} 
+{{ end }}

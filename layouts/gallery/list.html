@@ -2,31 +2,19 @@
 <div class="gallery-grid-container">
     {{ $photos := where .Site.RegularPages "Section" "view" }}
     {{ if gt (len $photos) 0 }}
-    <div class="gallery-grid" id="gallery-grid">
+    <div class="gallery-grid">
         {{ range $photos }}
         <a href="{{ .RelPermalink }}" class="gallery-item">
             <div class="gallery-thumbnail">
                 {{ with .Params.image }}
-                    {{ $imagePath := . }}
-                    {{ if not (hasPrefix $imagePath "/") }}
-                        {{ $imagePath = print "/" $imagePath }}
-                    {{ end }}
-                    {{ $original := resources.Get $imagePath }}
+                    {{ $original := resources.Get . }}
                     {{ if $original }}
                         {{ $thumbnail := $original.Resize "600x jpg q80" }}
                         <img src="{{ $thumbnail.RelPermalink }}" 
                              alt="{{ $.Title }}"
-                             width="{{ $thumbnail.Width }}"
-                             height="{{ $thumbnail.Height }}"
-                             onload="this.classList.add('loaded')"
-                             class="gallery-img">
+                             loading="lazy">
                     {{ else }}
-                        <img src="{{ $imagePath }}" 
-                             alt="{{ $.Title }}"
-                             width="600"
-                             height="auto"
-                             onload="this.classList.add('loaded')"
-                             class="gallery-img">
+                        <img src="{{ . }}" alt="{{ $.Title }}">
                     {{ end }}
                 {{ end }}
             </div>

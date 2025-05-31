@@ -2,10 +2,10 @@
 <div class="gallery-grid-container">
     {{ $photos := where .Site.RegularPages "Section" "view" }}
     {{ if gt (len $photos) 0 }}
-    <div class="gallery-grid" id="masonry-gallery">
+    <div class="gallery-grid">
         {{ range $photos }}
-        <div class="gallery-item">
-            <a href="{{ .RelPermalink }}" class="gallery-thumbnail">
+        <a href="{{ .RelPermalink }}" class="gallery-item">
+            <div class="gallery-thumbnail">
                 {{ with .Params.image }}
                     {{ $original := resources.Get . }}
                     {{ if $original }}
@@ -17,8 +17,8 @@
                         <img src="{{ . }}" alt="{{ $.Title }}">
                     {{ end }}
                 {{ end }}
-            </a>
-        </div>
+            </div>
+        </a>
         {{ end }}
     </div>
     {{ else }}

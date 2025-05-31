@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} - {{ .Site.Title }}</title>
 
+    <!-- Masonry and imagesLoaded -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
     <!-- All styles are defined here for simplicity -->
     <style>
         /* Reset default styles */
@@ -110,19 +114,17 @@
         }
 
         .gallery-grid {
-            column-count: 2;
-            column-gap: 0.4rem;
-            line-height: 0;
+            display: block;
+            margin: 0 auto;
         }
 
         .gallery-item {
+            width: calc(50% - 0.4rem);
             margin: 0 0 0.4rem;
             display: inline-block;
-            width: 100%;
             background: #111;
             padding: 0;
             border-radius: 2px;
-            break-inside: avoid;
         }
 
         .gallery-item:hover {
@@ -176,9 +178,8 @@
                 margin-bottom: 2rem;
             }
 
-            .gallery-grid {
-                column-count: 4;
-                column-gap: 0.4rem;
+            .gallery-item {
+                width: calc(25% - 0.4rem);
             }
         }
 
@@ -460,6 +461,23 @@
                         message.style.transition = 'opacity 0.5s ease';
                         setTimeout(() => document.body.removeChild(message), 500);
                     }, 1500);
+                });
+            }
+        });
+    </script>
+
+    <!-- Initialize Masonry -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var grid = document.querySelector('#masonry-gallery');
+            if (grid) {
+                imagesLoaded(grid, function() {
+                    new Masonry(grid, {
+                        itemSelector: '.gallery-item',
+                        columnWidth: '.gallery-item',
+                        percentPosition: true,
+                        gutter: 0
+                    });
                 });
             }
         });

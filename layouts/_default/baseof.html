@@ -136,14 +136,21 @@
             height: auto;
             display: block;
             position: relative;
+            overflow: hidden;
         }
 
-        .gallery-thumbnail img {
+        .gallery-thumbnail img.gallery-img {
             width: 100%;
             height: auto;
             display: block;
             margin: 0;
             padding: 0;
+            opacity: 0; /* Start with invisible images */
+            transition: opacity 0.3s ease-in;
+        }
+        
+        .gallery-thumbnail img.loaded {
+            opacity: 1; /* Show images when loaded */
         }
 
         /* Desktop styles */
@@ -437,6 +444,40 @@
                     item.classList.add('active');
                 }
             });
+            
+            // Handle gallery image loading
+            if (currentPath.startsWith('/gallery')) {
+                // Wait for all content to be loaded
+                window.addEventListener('load', function() {
+                    // Force immediate loading of all gallery images
+                    const galleryImages = document.querySelectorAll('.gallery-img');
+                    
+                    // Preload all images first
+                    const preloadPromises = Array.from(galleryImages).map(img => {
+                        return new Promise((resolve) => {
+                            if (img.complete) {
+                                resolve();
+                            } else {
+                                img.onload = () => resolve();
+                                img.onerror = () => resolve(); // Resolve even on error to continue
+                            }
+                        });
+                    });
+                    
+                    // When all images are preloaded, show them with a slight delay between each
+                    Promise.all(preloadPromises).then(() => {
+                        // Add a small delay to ensure layout is stable
+                        setTimeout(() => {
+                            galleryImages.forEach((img, index) => {
+                                // Stagger the appearance slightly for a nice effect
+                                setTimeout(() => {
+                                    img.classList.add('loaded');
+                                }, index * 50); // 50ms delay between each image
+                            });
+                        }, 100);
+                    });
+                });
+            }
 
             // Disable right click on photo view pages
             if (currentPath.startsWith('/view/')) {

@@ -1,52 +1,52 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-<head>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <title>广州佛山 View - Ju</title>
 
-    <!-- All styles are defined here for simplicity -->
+    
     <style>
-        /* Reset default styles */
+         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Basic page layout */
+         
         body {
-            background-color: #000;  /* Black background */
-            color: #fff;            /* White text */
+            background-color: #000;   
+            color: #fff;             
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
-        /* Disable scrolling for home page */
+         
         body.home {
             overflow: hidden;
             height: 100vh;
         }
 
-        /* Container layout */
+         
         .container {
             display: flex;
             min-height: 100vh;
-            flex-direction: column; /* Default for mobile */
-            padding-top: 60px; /* Space for fixed mobile nav */
+            flex-direction: column;  
+            padding-top: 60px;  
         }
 
-        /* Navigation styling */
+         
         .sidebar {
             width: 100%;
             padding: 1rem;
             background-color: rgba(0, 0, 0, 0.95);
             z-index: 1000;
-            position: fixed; /* Fixed position on mobile */
+            position: fixed;  
             top: 0;
             left: 0;
         }
 
-        /* Site title styling */
+         
         .site-title {
             font-size: 1.5rem;
             font-weight: 500;
@@ -56,10 +56,10 @@
             margin-bottom: 1rem;
         }
 
-        /* Navigation menu styling */
+         
         .nav-content {
             display: flex;
-            flex-direction: row; /* Horizontal for mobile */
+            flex-direction: row;  
             gap: 1rem;
             flex-wrap: wrap;
             align-items: center;
@@ -80,7 +80,7 @@
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: #fff; /* Changed back to solid white */
+            background-color: #fff;  
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -93,7 +93,7 @@
             transform: scaleX(1);
         }
 
-        /* Main content area */
+         
         .content {
             flex: 1;
             padding: 1rem;
@@ -101,7 +101,7 @@
             width: 100%;
         }
 
-        /* Gallery Grid styles */
+         
         .gallery-grid-container {
             width: 100%;
             padding: 0.4rem;
@@ -142,8 +142,8 @@
             position: relative;
             width: 100%;
             overflow: hidden;
-            background-color: #1a1a1a; /* Subtle placeholder color */
-            min-height: 50px; /* Minimum height to prevent tiny placeholders */
+            background-color: #1a1a1a;  
+            min-height: 50px;  
         }
         
         .gallery-img {
@@ -153,14 +153,14 @@
             margin: 0;
             padding: 0;
             transition: opacity 0.3s ease;
-            /* Browser will reserve space based on the width/height attributes */
+             
         }
 
-        /* Desktop styles */
+         
         @media (min-width: 768px) {
             .container {
-                flex-direction: row; /* Side by side on desktop */
-                padding-top: 0; /* Remove top padding on desktop */
+                flex-direction: row;  
+                padding-top: 0;  
             }
 
             .sidebar {
@@ -173,7 +173,7 @@
             }
 
             .nav-content {
-                flex-direction: column; /* Vertical on desktop */
+                flex-direction: column;  
                 gap: 1.5rem;
             }
 
@@ -192,14 +192,14 @@
             }
         }
 
-        /* Photo view styles */
+         
         .photo-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
             background: #000;
-            touch-action: none; /* Prevent default touch actions */
+            touch-action: none;  
         }
 
         .photo-image-container {
@@ -209,14 +209,14 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            overflow: hidden; /* Prevent content overflow during swipe */
+            overflow: hidden;  
         }
 
         .photo-image {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
-            user-select: none; /* Prevent image selection during swipe */
+            user-select: none;  
         }
 
         .photo-description {
@@ -257,7 +257,7 @@
             right: 2rem;
         }
 
-        /* Responsive adjustments for photo navigation */
+         
         @media (max-width: 768px) {
             .photo-nav {
                 font-size: 2rem;
@@ -277,7 +277,7 @@
             }
         }
 
-        /* List pages (Blog, Photos) */
+         
         .list-container {
             max-width: 800px;
             margin: 0 auto;
@@ -302,7 +302,7 @@
             font-size: 0.9rem;
         }
 
-        /* Content pages (Blog posts, About) */
+         
         .post-content {
             max-width: 800px;
             margin: 0 auto;
@@ -310,83 +310,83 @@
             color: rgba(255, 255, 255, 0.85);
         }
 
-        /* Add these styles for better list formatting */
+         
         .post-content ul {
-            padding-left: 0;  /* Remove default padding */
-            margin-left: 1.5rem;  /* Add consistent margin */
-            list-style-position: outside;  /* Keep bullets outside */
+            padding-left: 0;   
+            margin-left: 1.5rem;   
+            list-style-position: outside;   
         }
 
         .post-content ul li {
-            margin-bottom: 0.5rem;  /* Space between list items */
+            margin-bottom: 0.5rem;   
         }
 
         .post-content h1 {
-            margin-bottom: 1.5rem;  /* Space after headings */
+            margin-bottom: 1.5rem;   
         }
 
         .post-content p + ul {
-            margin-top: 1rem;  /* Space between paragraph and list */
+            margin-top: 1rem;   
         }
 
-        /* Social links styling */
+         
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;  /* Increased gap between icons */
+            gap: 2rem;   
             margin: 2rem 0;
         }
 
         .social-links img {
-            width: 32px;  /* Increased from default size */
-            height: 32px;  /* Increased from default size */
+            width: 32px;   
+            height: 32px;   
             opacity: 0.8;
             transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
         .social-links a:hover img {
             opacity: 1;
-            transform: scale(1.1);  /* Slight scale up on hover */
+            transform: scale(1.1);   
         }
 
-        /* Responsive adjustments for mobile */
+         
         @media (max-width: 768px) {
             .social-links img {
-                width: 28px;  /* Slightly smaller on mobile */
+                width: 28px;   
                 height: 28px;
             }
             
             .social-links {
-                gap: 1.5rem;  /* Smaller gap on mobile */
+                gap: 1.5rem;   
             }
         }
 
-        /* Add these new styles for blog post date */
+         
         .post-date {
             margin-top: -0.2rem;
             margin-bottom: 2.2rem;
             color: rgba(255, 255, 255, 0.7);
-            text-align: right;  /* Align date to the right */
-            width: 97%;       /* Ensure full width */
+            text-align: right;   
+            width: 97%;        
         }
 
         .post-title {
             margin-bottom: 0rem;
         }
 
-        /* Add this new style for headings in post content */
+         
         .post-content h2 {
-            margin-bottom: 0.3rem;  /* Space below headings */
+            margin-bottom: 0.3rem;   
             font-size: 1.8rem;
         }
 
-        /* Adjust paragraph spacing */
+         
         .post-content p {
-            margin-bottom: 1.2rem;  /* Space between paragraphs */
+            margin-bottom: 1.2rem;   
         }
 
 
-        /* Home page hero section */
+         
         .home-hero {
             position: fixed;
             top: 0;
@@ -397,22 +397,22 @@
             align-items: center;
             justify-content: center;
             background-color: #000;
-            padding: 60px 0 0 0; /* Only top padding for nav bar */
+            padding: 60px 0 0 0;  
             box-sizing: border-box;
-            overflow: hidden; /* Ensure image doesn't create scrollbars */
+            overflow: hidden;  
         }
 
         .home-hero img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Allow cropping to fill space */
-            object-position: center; /* Keep image centered while cropping */
+            object-fit: cover;  
+            object-position: center;  
         }
 
-        /* Desktop styles */
+         
         @media (min-width: 768px) {
             .home-hero {
-                left: 200px; /* Account for sidebar */
+                left: 200px;  
                 width: calc(100% - 200px);
                 padding: 2rem;
             }
@@ -422,11 +422,11 @@
                 height: auto;
                 max-width: 100%;
                 max-height: calc(100vh - 4rem);
-                object-fit: contain; /* Prevent cropping on desktop */
+                object-fit: contain;  
             }
         }
 
-        /* Add copyright text at bottom right */
+         
         .copyright {
             position: fixed;
             bottom: 0.5rem;
@@ -440,7 +440,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Add active class to current navigation item
+            
             const currentPath = window.location.pathname;
             document.querySelectorAll('.nav-item').forEach(item => {
                 if (item.getAttribute('href') === currentPath) {
@@ -448,7 +448,7 @@
                 }
             });
 
-            // Disable right click on photo view pages
+            
             if (currentPath.startsWith('/view/')) {
                 document.addEventListener('contextmenu', function(e) {
                     e.preventDefault();
@@ -475,19 +475,386 @@
         });
     </script>
 </head>
-<body{{ if .IsHome }} class="home"{{ end }}>
+<body>
     <div class="container">
         <nav class="sidebar">
             <div class="nav-content">
-                <a href="/" class="site-title">{{ .Site.Title }}</a>
-                {{ range .Site.Menus.main }}
-                <a href="{{ .URL }}" class="nav-item">{{ .Name }}</a>
-                {{ end }}
+                <a href="/" class="site-title">Ju</a>
+                
+                <a href="/" class="nav-item">Home</a>
+                
+                <a href="/view/" class="nav-item">View</a>
+                
+                <a href="/gallery/" class="nav-item">Gallery</a>
+                
+                <a href="/blog/" class="nav-item">Blog</a>
+                
+                <a href="/about/" class="nav-item">About</a>
+                
             </div>
         </nav>
 
         <main class="content">
-            {{ block "main" . }}{{ end }}
+            
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+<div class="photo-container">
+    <div class="photo-image-container">
+        
+            
+            
+                
+                
+                
+                <img
+                    srcset="/images/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-PDM_4371_hu_206020964df43251.jpg 400w,
+                            /images/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-PDM_4371_hu_77e2b82d2fa69ab4.jpg 800w,
+                            /images/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-PDM_4371_hu_7688eab35cd1fdb2.jpg 1200w"
+                    sizes="(max-width: 400px) 400px,
+                           (max-width: 800px) 800px,
+                           1200px"
+                    src="/images/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-PDM_4371_hu_7688eab35cd1fdb2.jpg"
+                    alt="广州佛山 View"
+                    class="photo-image"
+                    loading="lazy"
+                >
+            
+        
+    
+        
+        <a href="/view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4315/" class="photo-nav prev">&lt;</a>
+        
+        
+        <a href="/view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4403/" class="photo-nav next">&gt;</a>
+        
+    </div>
+    
+    <div class="photo-description">
+        <p>广州佛山 · 2024-09</p>
+        
+        <p>A scene from 广州佛山</p>
+        
+    </div>
+</div> 
+
             
             <div class="copyright">©All rights reserved.</div>
         </main>

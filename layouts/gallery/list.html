@@ -10,11 +10,21 @@
                     {{ $original := resources.Get . }}
                     {{ if $original }}
                         {{ $thumbnail := $original.Resize "600x jpg q80" }}
-                        <img src="{{ $thumbnail.RelPermalink }}" 
-                             alt="{{ $.Title }}"
-                             loading="lazy">
+                        <div class="image-wrapper">
+                            <img class="gallery-img" 
+                                 src="{{ $thumbnail.RelPermalink }}" 
+                                 alt="{{ $.Title }}"
+                                 width="{{ $thumbnail.Width }}"
+                                 height="{{ $thumbnail.Height }}"
+                                 loading="lazy">
+                        </div>
                     {{ else }}
-                        <img src="{{ . }}" alt="{{ $.Title }}">
+                        <div class="image-wrapper">
+                            <img class="gallery-img" 
+                                 src="{{ . }}" 
+                                 alt="{{ $.Title }}"
+                                 loading="lazy">
+                        </div>
                     {{ end }}
                 {{ end }}
             </div>

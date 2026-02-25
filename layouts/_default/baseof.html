@@ -145,7 +145,7 @@
             background-color: #1a1a1a; /* Subtle placeholder color */
             min-height: 50px; /* Minimum height to prevent tiny placeholders */
         }
-        
+
         .gallery-img {
             width: 100%;
             height: auto;
@@ -154,6 +154,46 @@
             padding: 0;
             transition: opacity 0.3s ease;
             /* Browser will reserve space based on the width/height attributes */
+        }
+
+        /* Blur placeholder effect */
+        .gallery-img-loading {
+            filter: blur(10px);
+            transform: scale(1.1);
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+
+        .gallery-img-loaded {
+            filter: blur(0);
+            transform: scale(1);
+        }
+
+        /* Loading shimmer animation */
+        .image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.03) 50%,
+                transparent 100%
+            );
+            animation: shimmer 2s infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .image-wrapper:has(.gallery-img-loaded)::before {
+            display: none;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
 
         /* Desktop styles */

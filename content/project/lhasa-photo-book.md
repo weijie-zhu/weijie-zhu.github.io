@@ -3,6 +3,8 @@ title: "Lhasa Photo Book"
 date: 2026-01-20
 description: "A visual narrative project turning a Tibet trip into a compact photo book."
 status: "Completed"
+start: 2025-10-01
+end: 2026-01-20
 role: "Photography, Editing, Book Design"
 year: "2026"
 stack: ["Hugo", "Lightroom", "InDesign"]
@@ -42,4 +44,3 @@ The second approach produced a stronger rhythm between pages.
 
 - Final draft delivered in two versions: print and screen.
 - Shared with a small test group and collected reading feedback.
-

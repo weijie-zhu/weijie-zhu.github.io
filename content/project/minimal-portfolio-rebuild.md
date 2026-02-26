@@ -3,6 +3,7 @@ title: "Minimal Portfolio Rebuild"
 date: 2025-11-08
 description: "A fast portfolio rebuild focused on mobile readability and image performance."
 status: "In Progress"
+start: 2025-08-01
 role: "Design, Frontend"
 year: "2025"
 stack: ["Hugo", "HTML", "CSS", "Cloudflare Pages"]
@@ -40,4 +41,3 @@ The old portfolio had strong images but weak scanning behavior on mobile.
 1. Add project case-study pages.
 2. Tune typography for long-form reading.
 3. Run final performance check before publishing.
-

@@ -443,15 +443,82 @@
             text-decoration: none;
         }
 
-        .project-list-meta {
-            color: rgba(255, 255, 255, 0.7);
+        .project-list-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .project-list-title {
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            line-height: 1.2;
+        }
+
+        .project-status-dot {
+            width: 0.6rem;
+            height: 0.6rem;
+            border-radius: 999px;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+
+        .status-green {
+            background: #50d26f;
+            box-shadow: 0 0 0 2px rgba(80, 210, 111, 0.15);
+        }
+
+        .status-yellow {
+            background: #f2c84b;
+            box-shadow: 0 0 0 2px rgba(242, 200, 75, 0.15);
+        }
+
+        .status-red {
+            background: #f06a64;
+            box-shadow: 0 0 0 2px rgba(240, 106, 100, 0.15);
+        }
+
+        .project-time-range {
+            color: rgba(255, 255, 255, 0.72);
             font-size: 0.9rem;
-            margin-top: 0.35rem;
+            white-space: nowrap;
+        }
+
+        .project-list-meta {
+            margin-top: 0.45rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .project-keyword {
+            font-size: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 999px;
+            padding: 0.12rem 0.52rem;
+            color: rgba(255, 255, 255, 0.86);
         }
 
         .project-list-desc {
             margin-top: 0.6rem;
             color: rgba(255, 255, 255, 0.82);
+        }
+
+        .project-single-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .project-single-title {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            margin-bottom: 0;
         }
 
         .project-cover {
@@ -558,6 +625,18 @@
         }
 
         @media (max-width: 768px) {
+            .project-list-head {
+                align-items: flex-start;
+            }
+
+            .project-time-range {
+                font-size: 0.8rem;
+            }
+
+            .project-single-head {
+                align-items: flex-start;
+            }
+
             .project-gallery {
                 grid-template-columns: 1fr;
             }

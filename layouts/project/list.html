@@ -3,12 +3,39 @@
     {{ $projects := .Pages.ByDate.Reverse }}
     {{ if gt (len $projects) 0 }}
         {{ range $projects }}
+        {{ $status := lower (.Params.status | default "") }}
+        {{ $statusClass := "status-yellow" }}
+        {{ if in (slice "completed" "done" "shipped" "live") $status }}{{ $statusClass = "status-green" }}{{ end }}
+        {{ if in (slice "blocked" "stalled" "cancelled" "canceled") $status }}{{ $statusClass = "status-red" }}{{ end }}
+
+        {{ $startRaw := .Params.start | default .Params.start_date }}
+        {{ $endRaw := .Params.end | default .Params.end_date }}
+        {{ $startText := .Date.Format "Jan 2006" }}
+        {{ if $startRaw }}{{ $startText = (time $startRaw).Format "Jan 2006" }}{{ end }}
+        {{ $endText := "" }}
+        {{ if $endRaw }}
+            {{ $endText = (time $endRaw).Format "Jan 2006" }}
+        {{ else if in (slice "in progress" "active" "maintenance" "ongoing") $status }}
+            {{ $endText = "Present" }}
+        {{ else }}
+            {{ $endText = $startText }}
+        {{ end }}
+
+        {{ $keywords := .Params.stack | default (.Params.keywords | default .Params.tags) }}
         <div class="project-list-item">
-            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <div class="project-list-head">
+                <h2 class="project-list-title">
+                    <span class="project-status-dot {{ $statusClass }}" aria-hidden="true"></span>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h2>
+                <div class="project-time-range">{{ $startText }} - {{ $endText }}</div>
+            </div>
             <div class="project-list-meta">
-                {{ .Date.Format "January 2, 2006" }}
-                {{ with .Params.status }} • {{ . }}{{ end }}
-                {{ with .Params.role }} • {{ . }}{{ end }}
+                {{ if $keywords }}
+                    {{ range $keywords }}
+                    <span class="project-keyword">{{ . }}</span>
+                    {{ end }}
+                {{ end }}
             </div>
             {{ with .Params.description }}
             <p class="project-list-desc">{{ . }}</p>
@@ -24,4 +51,3 @@
     {{ end }}
 </div>
 {{ end }}
-

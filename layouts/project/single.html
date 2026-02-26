@@ -1,15 +1,38 @@
 {{ define "main" }}
+{{ $status := lower (.Params.status | default "") }}
+{{ $statusClass := "status-yellow" }}
+{{ if in (slice "completed" "done" "shipped" "live") $status }}{{ $statusClass = "status-green" }}{{ end }}
+{{ if in (slice "blocked" "stalled" "cancelled" "canceled") $status }}{{ $statusClass = "status-red" }}{{ end }}
+
+{{ $startRaw := .Params.start | default .Params.start_date }}
+{{ $endRaw := .Params.end | default .Params.end_date }}
+{{ $startText := .Date.Format "Jan 2006" }}
+{{ if $startRaw }}{{ $startText = (time $startRaw).Format "Jan 2006" }}{{ end }}
+{{ $endText := "" }}
+{{ if $endRaw }}
+    {{ $endText = (time $endRaw).Format "Jan 2006" }}
+{{ else if in (slice "in progress" "active" "maintenance" "ongoing") $status }}
+    {{ $endText = "Present" }}
+{{ else }}
+    {{ $endText = $startText }}
+{{ end }}
+
+{{ $keywords := .Params.stack | default (.Params.keywords | default .Params.tags) }}
 <div class="post-content project-content">
     <a class="back-link" href="/project/" aria-label="Go back" title="Go back" onclick="if (history.length > 1) { history.back(); return false; }">&#8592;</a>
-    <h1 class="post-title">{{ .Title }}</h1>
-    <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+    <div class="project-single-head">
+        <h1 class="post-title project-single-title">
+            <span class="project-status-dot {{ $statusClass }}" aria-hidden="true"></span>
+            {{ .Title }}
+        </h1>
+        <div class="project-time-range">{{ $startText }} - {{ $endText }}</div>
+    </div>
 
-    <div class="project-meta">
-        {{ with .Params.status }}<span class="project-chip">Status: {{ . }}</span>{{ end }}
-        {{ with .Params.role }}<span class="project-chip">Role: {{ . }}</span>{{ end }}
-        {{ with .Params.year }}<span class="project-chip">Year: {{ . }}</span>{{ end }}
-        {{ with .Params.stack }}
-            {{ range . }}<span class="project-chip">{{ . }}</span>{{ end }}
+    <div class="project-list-meta">
+        {{ if $keywords }}
+            {{ range $keywords }}
+            <span class="project-keyword">{{ . }}</span>
+            {{ end }}
         {{ end }}
     </div>
 

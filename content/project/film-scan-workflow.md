@@ -3,6 +3,7 @@ title: "Film Scan Workflow"
 date: 2025-09-02
 description: "A repeatable workflow for scanning, naming, and color balancing film rolls."
 status: "Maintenance"
+start: 2025-03-01
 role: "Workflow Design"
 year: "2025"
 stack: ["Negative Lab Pro", "Lightroom", "Shell Scripts"]
@@ -37,4 +38,3 @@ exports/print/
 ## Notes
 
 This page is a template-style project entry showing how code blocks and markdown content look inside the new project single layout.
-

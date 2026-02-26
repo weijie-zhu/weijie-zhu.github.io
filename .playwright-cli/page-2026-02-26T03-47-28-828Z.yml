@@ -1,0 +1,481 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "Ju" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - link "Home" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - link "View" [ref=e7] [cursor=pointer]:
+        - /url: /view/
+      - link "Gallery" [ref=e8] [cursor=pointer]:
+        - /url: /gallery/
+      - link "Blog" [ref=e9] [cursor=pointer]:
+        - /url: /blog/
+      - link "About" [ref=e10] [cursor=pointer]:
+        - /url: /about/
+  - main [ref=e11]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - link "Lhasa View" [ref=e15] [cursor=pointer]:
+          - /url: /view/20250701lhasa-47-/
+          - img "Lhasa View" [ref=e18]
+        - link "Lhasa View" [ref=e19] [cursor=pointer]:
+          - /url: /view/20250630lhasa-99-/
+          - img "Lhasa View" [ref=e22]
+        - link "Lhasa View" [ref=e23] [cursor=pointer]:
+          - /url: /view/20250626lhasa-144-/
+          - img "Lhasa View" [ref=e26]
+        - link "Lhasa View" [ref=e27] [cursor=pointer]:
+          - /url: /view/20250626lhasa-265-/
+          - img "Lhasa View" [ref=e30]
+        - link "Lhasa View" [ref=e31] [cursor=pointer]:
+          - /url: /view/20250626lhasa-313-/
+          - img "Lhasa View" [ref=e34]
+        - link "Lhasa View" [ref=e35] [cursor=pointer]:
+          - /url: /view/20250626lhasa-363-/
+          - img "Lhasa View" [ref=e38]
+        - link "Lhasa View" [ref=e39] [cursor=pointer]:
+          - /url: /view/20250626lhasa-63-/
+          - img "Lhasa View" [ref=e42]
+        - link "KotaKinabalu View" [ref=e43] [cursor=pointer]:
+          - /url: /view/20250113kotakinabalu-45/
+          - img "KotaKinabalu View" [ref=e46]
+        - link "lombok View" [ref=e47] [cursor=pointer]:
+          - /url: /view/20250106lombok-168/
+          - img "lombok View" [ref=e50]
+        - link "lombok View" [ref=e51] [cursor=pointer]:
+          - /url: /view/20250106lombok-240/
+          - img "lombok View" [ref=e54]
+        - link "lombok View" [ref=e55] [cursor=pointer]:
+          - /url: /view/20250106lombok-98/
+          - img "lombok View" [ref=e58]
+        - link "Lombok View" [ref=e59] [cursor=pointer]:
+          - /url: /view/20250104lombok-51/
+          - img "Lombok View" [ref=e62]
+        - link "Malang View" [ref=e63] [cursor=pointer]:
+          - /url: /view/20241230malang-new-year-160/
+          - img "Malang View" [ref=e66]
+        - link "Yogyakarta View" [ref=e67] [cursor=pointer]:
+          - /url: /view/20241227yogyakarta-16/
+          - img "Yogyakarta View" [ref=e70]
+        - link "Yogyakarta View" [ref=e71] [cursor=pointer]:
+          - /url: /view/20241227yogyakarta-255/
+          - img "Yogyakarta View" [ref=e74]
+        - link "Singapore View" [ref=e75] [cursor=pointer]:
+          - /url: /view/20241225singapore-22/
+          - img "Singapore View" [ref=e78]
+        - link "Krabi View" [ref=e79] [cursor=pointer]:
+          - /url: /view/20241219krabi-phiphi-209/
+          - img "Krabi View" [ref=e82]
+        - link "Krabi View" [ref=e83] [cursor=pointer]:
+          - /url: /view/20241219krabi-phiphi-79/
+          - img "Krabi View" [ref=e86]
+        - link "Chumphon View" [ref=e87] [cursor=pointer]:
+          - /url: /view/20241218chumphon-129/
+          - img "Chumphon View" [ref=e90]
+        - link "Chumphon View" [ref=e91] [cursor=pointer]:
+          - /url: /view/20241218chumphon-83/
+          - img "Chumphon View" [ref=e94]
+        - link "Ayutthaya View" [ref=e95] [cursor=pointer]:
+          - /url: /view/20241216ayutthaya-273/
+          - img "Ayutthaya View" [ref=e98]
+        - link "Bangkok View" [ref=e99] [cursor=pointer]:
+          - /url: /view/20241213bangkok-1215ayutthaya-152/
+          - img "Bangkok View" [ref=e102]
+        - link "View" [ref=e103] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-11/
+          - img "View" [ref=e106]
+        - link "View" [ref=e107] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-350/
+          - img "View" [ref=e110]
+        - link "View" [ref=e111] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-64/
+          - img "View" [ref=e114]
+        - link "View" [ref=e115] [cursor=pointer]:
+          - /url: /view/20241001-%E6%BE%B3%E9%97%A8-114/
+          - img "View" [ref=e118]
+        - link "香港与西兰花 View" [ref=e119] [cursor=pointer]:
+          - /url: /view/20240929%E9%A6%99%E6%B8%AF%E4%B8%8E%E8%A5%BF%E5%85%B0%E8%8A%B1-pdm_5932/
+          - img "香港与西兰花 View" [ref=e122]
+        - link "澳门凼仔 View" [ref=e123] [cursor=pointer]:
+          - /url: /view/20240926%E6%BE%B3%E9%97%A8%E5%87%BC%E4%BB%94-pdm_5724/
+          - img "澳门凼仔 View" [ref=e126]
+        - link "澳门路环 View" [ref=e127] [cursor=pointer]:
+          - /url: /view/20240925%E6%BE%B3%E9%97%A8%E8%B7%AF%E7%8E%AF-pdm_5410/
+          - img "澳门路环 View" [ref=e130]
+        - link "澳门路环 View" [ref=e131] [cursor=pointer]:
+          - /url: /view/20240925%E6%BE%B3%E9%97%A8%E8%B7%AF%E7%8E%AF-pdm_5605/
+          - img "澳门路环 View" [ref=e134]
+        - link "澳门烟花 View" [ref=e135] [cursor=pointer]:
+          - /url: /view/20240914%E6%BE%B3%E9%97%A8%E7%83%9F%E8%8A%B1-pdm_5031/
+          - img "澳门烟花 View" [ref=e138]
+        - link "广州佛山 View" [ref=e139] [cursor=pointer]:
+          - /url: /view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4371/
+          - img "广州佛山 View" [ref=e142]
+        - link "广州佛山 View" [ref=e143] [cursor=pointer]:
+          - /url: /view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4478/
+          - img "广州佛山 View" [ref=e146]
+        - link "sakura_mingsai View" [ref=e147] [cursor=pointer]:
+          - /url: /view/20240331sakura_mingsai-38/
+          - img "sakura_mingsai View" [ref=e150]
+        - link "世端乐队 View" [ref=e151] [cursor=pointer]:
+          - /url: /view/20231027%E4%B8%96%E7%AB%AF%E4%B9%90%E9%98%9F-100/
+          - img "世端乐队 View" [ref=e154]
+        - link "Shanghai View" [ref=e155] [cursor=pointer]:
+          - /url: /view/20231015-9/
+          - img "Shanghai View" [ref=e158]
+        - link "小学生书架捐书及肖像展导览 View" [ref=e159] [cursor=pointer]:
+          - /url: /view/20230805%E5%B0%8F%E5%AD%A6%E7%94%9F%E4%B9%A6%E6%9E%B6%E6%8D%90%E4%B9%A6%E5%8F%8A%E8%82%96%E5%83%8F%E5%B1%95%E5%AF%BC%E8%A7%88-zwj-ps5_2128/
+          - img "小学生书架捐书及肖像展导览 View" [ref=e162]
+        - link "202312encu-胶片 View" [ref=e163] [cursor=pointer]:
+          - /url: /view/202312encu-%E8%83%B6%E7%89%87/
+          - img "202312encu-胶片 View" [ref=e166]
+        - link "楼中剪影小幅 View" [ref=e167] [cursor=pointer]:
+          - /url: /view/20200606%E6%A5%BC%E4%B8%AD%E5%89%AA%E5%BD%B1%E5%B0%8F%E5%B9%85/
+          - img "楼中剪影小幅 View" [ref=e170]
+      - generic [ref=e171]:
+        - link "Lhasa View" [ref=e172] [cursor=pointer]:
+          - /url: /view/20250701lhasa-57-/
+          - img "Lhasa View" [ref=e175]
+        - link "Lhasa View" [ref=e176] [cursor=pointer]:
+          - /url: /view/20250626lhasa-101-/
+          - img "Lhasa View" [ref=e179]
+        - link "Lhasa View" [ref=e180] [cursor=pointer]:
+          - /url: /view/20250626lhasa-238-/
+          - img "Lhasa View" [ref=e183]
+        - link "Lhasa View" [ref=e184] [cursor=pointer]:
+          - /url: /view/20250626lhasa-293-/
+          - img "Lhasa View" [ref=e187]
+        - link "Lhasa View" [ref=e188] [cursor=pointer]:
+          - /url: /view/20250626lhasa-334-/
+          - img "Lhasa View" [ref=e191]
+        - link "Lhasa View" [ref=e192] [cursor=pointer]:
+          - /url: /view/20250626lhasa-367-/
+          - img "Lhasa View" [ref=e195]
+        - link "Lhasa View" [ref=e196] [cursor=pointer]:
+          - /url: /view/20250626lhasa-79-/
+          - img "Lhasa View" [ref=e199]
+        - link "lombok View" [ref=e200] [cursor=pointer]:
+          - /url: /view/20250106lombok-127/
+          - img "lombok View" [ref=e203]
+        - link "lombok View" [ref=e204] [cursor=pointer]:
+          - /url: /view/20250106lombok-175/
+          - img "lombok View" [ref=e207]
+        - link "lombok View" [ref=e208] [cursor=pointer]:
+          - /url: /view/20250106lombok-260/
+          - img "lombok View" [ref=e211]
+        - link "Lombok View" [ref=e212] [cursor=pointer]:
+          - /url: /view/20250104lombok-13/
+          - img "Lombok View" [ref=e215]
+        - link "Lombok View" [ref=e216] [cursor=pointer]:
+          - /url: /view/20250104lombok-54/
+          - img "Lombok View" [ref=e219]
+        - link "Malang View" [ref=e220] [cursor=pointer]:
+          - /url: /view/20241230malang-new-year-260/
+          - img "Malang View" [ref=e223]
+        - link "Yogyakarta View" [ref=e224] [cursor=pointer]:
+          - /url: /view/20241227yogyakarta-223/
+          - img "Yogyakarta View" [ref=e227]
+        - link "Yogyakarta View" [ref=e228] [cursor=pointer]:
+          - /url: /view/20241227yogyakarta-31/
+          - img "Yogyakarta View" [ref=e231]
+        - link "Singapore View" [ref=e232] [cursor=pointer]:
+          - /url: /view/20241225singapore-74/
+          - img "Singapore View" [ref=e235]
+        - link "Krabi View" [ref=e236] [cursor=pointer]:
+          - /url: /view/20241219krabi-phiphi-269/
+          - img "Krabi View" [ref=e239]
+        - link "Krabi View" [ref=e240] [cursor=pointer]:
+          - /url: /view/20241219krabi-phiphi-85/
+          - img "Krabi View" [ref=e243]
+        - link "Chumphon View" [ref=e244] [cursor=pointer]:
+          - /url: /view/20241218chumphon-24/
+          - img "Chumphon View" [ref=e247]
+        - link "Ayutthaya View" [ref=e248] [cursor=pointer]:
+          - /url: /view/20241216ayutthaya-179/
+          - img "Ayutthaya View" [ref=e251]
+        - link "Ayutthaya View" [ref=e252] [cursor=pointer]:
+          - /url: /view/20241216ayutthaya-281/
+          - img "Ayutthaya View" [ref=e255]
+        - link "Bangkok View" [ref=e256] [cursor=pointer]:
+          - /url: /view/20241213bangkok-1215ayutthaya-263/
+          - img "Bangkok View" [ref=e259]
+        - link "View" [ref=e260] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-154/
+          - img "View" [ref=e263]
+        - link "View" [ref=e264] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-46/
+          - img "View" [ref=e267]
+        - link "View" [ref=e268] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-76/
+          - img "View" [ref=e271]
+        - link "View" [ref=e272] [cursor=pointer]:
+          - /url: /view/20241001-%E6%BE%B3%E9%97%A8-166/
+          - img "View" [ref=e275]
+        - link "香港与西兰花 View" [ref=e276] [cursor=pointer]:
+          - /url: /view/20240929%E9%A6%99%E6%B8%AF%E4%B8%8E%E8%A5%BF%E5%85%B0%E8%8A%B1-pdm_5933/
+          - img "香港与西兰花 View" [ref=e279]
+        - link "澳门路环 View" [ref=e280] [cursor=pointer]:
+          - /url: /view/20240925%E6%BE%B3%E9%97%A8%E8%B7%AF%E7%8E%AF-pdm_5287/
+          - img "澳门路环 View" [ref=e283]
+        - link "澳门路环 View" [ref=e284] [cursor=pointer]:
+          - /url: /view/20240925%E6%BE%B3%E9%97%A8%E8%B7%AF%E7%8E%AF-pdm_5425/
+          - img "澳门路环 View" [ref=e287]
+        - link "澳门路环 View" [ref=e288] [cursor=pointer]:
+          - /url: /view/20240925%E6%BE%B3%E9%97%A8%E8%B7%AF%E7%8E%AF-pdm_5611/
+          - img "澳门路环 View" [ref=e291]
+        - link "广州佛山 View" [ref=e292] [cursor=pointer]:
+          - /url: /view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4248/
+          - img "广州佛山 View" [ref=e295]
+        - link "广州佛山 View" [ref=e296] [cursor=pointer]:
+          - /url: /view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4403/
+          - img "广州佛山 View" [ref=e299]
+        - link "广州佛山 View" [ref=e300] [cursor=pointer]:
+          - /url: /view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4537/
+          - img "广州佛山 View" [ref=e303]
+        - link "哈尔滨 View" [ref=e304] [cursor=pointer]:
+          - /url: /view/20231127%E5%93%88%E5%B0%94%E6%BB%A8-58/
+          - img "哈尔滨 View" [ref=e307]
+        - link "世端乐队 View" [ref=e308] [cursor=pointer]:
+          - /url: /view/20231027%E4%B8%96%E7%AB%AF%E4%B9%90%E9%98%9F-101/
+          - img "世端乐队 View" [ref=e311]
+        - link "闵浦大桥摄协 View" [ref=e312] [cursor=pointer]:
+          - /url: /view/20231015%E9%97%B5%E6%B5%A6%E5%A4%A7%E6%A1%A5%E6%91%84%E5%8D%8F-%E4%BA%BA%E6%96%87-7/
+          - img "闵浦大桥摄协 View" [ref=e315]
+        - link "小学生书架捐书及肖像展导览 View" [ref=e316] [cursor=pointer]:
+          - /url: /view/20230805%E5%B0%8F%E5%AD%A6%E7%94%9F%E4%B9%A6%E6%9E%B6%E6%8D%90%E4%B9%A6%E5%8F%8A%E8%82%96%E5%83%8F%E5%B1%95%E5%AF%BC%E8%A7%88-zwj-ps5_2134/
+          - img "小学生书架捐书及肖像展导览 View" [ref=e319]
+        - link "日出 View" [ref=e320] [cursor=pointer]:
+          - /url: /view/20221112%E6%97%A5%E5%87%BA/
+          - img "日出 View" [ref=e323]
+      - generic [ref=e324]:
+        - link "Lhasa View" [ref=e325] [cursor=pointer]:
+          - /url: /view/20250630lhasa-133-/
+          - img "Lhasa View" [ref=e328]
+        - link "Lhasa View" [ref=e329] [cursor=pointer]:
+          - /url: /view/20250626lhasa-122-/
+          - img "Lhasa View" [ref=e332]
+        - link "Lhasa View" [ref=e333] [cursor=pointer]:
+          - /url: /view/20250626lhasa-250-/
+          - img "Lhasa View" [ref=e336]
+        - link "Lhasa View" [ref=e337] [cursor=pointer]:
+          - /url: /view/20250626lhasa-308-/
+          - img "Lhasa View" [ref=e340]
+        - link "Lhasa View" [ref=e341] [cursor=pointer]:
+          - /url: /view/20250626lhasa-336-/
+          - img "Lhasa View" [ref=e344]
+        - link "Lhasa View" [ref=e345] [cursor=pointer]:
+          - /url: /view/20250626lhasa-373-/
+          - img "Lhasa View" [ref=e348]
+        - link "Lhasa View" [ref=e349] [cursor=pointer]:
+          - /url: /view/20250626lhasa-87-/
+          - img "Lhasa View" [ref=e352]
+        - link "lombok View" [ref=e353] [cursor=pointer]:
+          - /url: /view/20250106lombok-145/
+          - img "lombok View" [ref=e356]
+        - link "lombok View" [ref=e357] [cursor=pointer]:
+          - /url: /view/20250106lombok-179/
+          - img "lombok View" [ref=e360]
+        - link "lombok View" [ref=e361] [cursor=pointer]:
+          - /url: /view/20250106lombok-68/
+          - img "lombok View" [ref=e364]
+        - link "Lombok View" [ref=e365] [cursor=pointer]:
+          - /url: /view/20250104lombok-15/
+          - img "Lombok View" [ref=e368]
+        - link "Lombok View" [ref=e369] [cursor=pointer]:
+          - /url: /view/20250104lombok-71/
+          - img "Lombok View" [ref=e372]
+        - link "Malang View" [ref=e373] [cursor=pointer]:
+          - /url: /view/20241230malang-new-year-58/
+          - img "Malang View" [ref=e376]
+        - link "Yogyakarta View" [ref=e377] [cursor=pointer]:
+          - /url: /view/20241227yogyakarta-233/
+          - img "Yogyakarta View" [ref=e380]
+        - link "Yogyakarta View" [ref=e381] [cursor=pointer]:
+          - /url: /view/20241227yogyakarta-32/
+          - img "Yogyakarta View" [ref=e384]
+        - link "Krabi View" [ref=e385] [cursor=pointer]:
+          - /url: /view/20241219krabi-phiphi-103/
+          - img "Krabi View" [ref=e388]
+        - link "Krabi View" [ref=e389] [cursor=pointer]:
+          - /url: /view/20241219krabi-phiphi-279/
+          - img "Krabi View" [ref=e392]
+        - link "Beach View" [ref=e393] [cursor=pointer]:
+          - /url: /view/chumphon-129/
+          - img "Beach View" [ref=e396]
+        - link "Chumphon View" [ref=e397] [cursor=pointer]:
+          - /url: /view/20241218chumphon-43/
+          - img "Chumphon View" [ref=e400]
+        - link "Ayutthaya View" [ref=e401] [cursor=pointer]:
+          - /url: /view/20241216ayutthaya-181/
+          - img "Ayutthaya View" [ref=e404]
+        - link "Bangkok View" [ref=e405] [cursor=pointer]:
+          - /url: /view/20241213bangkok-1215ayutthaya-100/
+          - img "Bangkok View" [ref=e408]
+        - link "澳门hellokitty View" [ref=e409] [cursor=pointer]:
+          - /url: /view/20241103-%E6%BE%B3%E9%97%A8hellokitty-1/
+          - img "澳门hellokitty View" [ref=e412]
+        - link "View" [ref=e413] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-183/
+          - img "View" [ref=e416]
+        - link "View" [ref=e417] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-50/
+          - img "View" [ref=e420]
+        - link "View" [ref=e421] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-78/
+          - img "View" [ref=e424]
+        - link "香港与西兰花 View" [ref=e425] [cursor=pointer]:
+          - /url: /view/20240929%E9%A6%99%E6%B8%AF%E4%B8%8E%E8%A5%BF%E5%85%B0%E8%8A%B1-pdm_5889/
+          - img "香港与西兰花 View" [ref=e428]
+        - link "香港与西兰花 View" [ref=e429] [cursor=pointer]:
+          - /url: /view/20240929%E9%A6%99%E6%B8%AF%E4%B8%8E%E8%A5%BF%E5%85%B0%E8%8A%B1-pdm_5939/
+          - img "香港与西兰花 View" [ref=e432]
+        - link "澳门路环 View" [ref=e433] [cursor=pointer]:
+          - /url: /view/20240925%E6%BE%B3%E9%97%A8%E8%B7%AF%E7%8E%AF-pdm_5298/
+          - img "澳门路环 View" [ref=e436]
+        - link "澳门路环 View" [ref=e437] [cursor=pointer]:
+          - /url: /view/20240925%E6%BE%B3%E9%97%A8%E8%B7%AF%E7%8E%AF-pdm_5445/
+          - img "澳门路环 View" [ref=e440]
+        - link "澳门烟花 View" [ref=e441] [cursor=pointer]:
+          - /url: /view/20240914%E6%BE%B3%E9%97%A8%E7%83%9F%E8%8A%B1-pdm_4992/
+          - img "澳门烟花 View" [ref=e444]
+        - link "广州佛山 View" [ref=e445] [cursor=pointer]:
+          - /url: /view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4298/
+          - img "广州佛山 View" [ref=e448]
+        - link "广州佛山 View" [ref=e449] [cursor=pointer]:
+          - /url: /view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4408/
+          - img "广州佛山 View" [ref=e452]
+        - link "广州佛山 View" [ref=e453] [cursor=pointer]:
+          - /url: /view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4569/
+          - img "广州佛山 View" [ref=e456]
+        - link "黑吉辽 View" [ref=e457] [cursor=pointer]:
+          - /url: /view/20231122%E9%BB%91%E5%90%89%E8%BE%BD-128/
+          - img "黑吉辽 View" [ref=e460]
+        - link "嘉兴游玩 View" [ref=e461] [cursor=pointer]:
+          - /url: /view/20231024%E5%98%89%E5%85%B4%E6%B8%B8%E7%8E%A9-97/
+          - img "嘉兴游玩 View" [ref=e464]
+        - link "上海西岸 View" [ref=e465] [cursor=pointer]:
+          - /url: /view/20230815-%E4%B8%8A%E6%B5%B7%E8%A5%BF%E5%B2%B8-ps5_3695/
+          - img "上海西岸 View" [ref=e468]
+        - link "西岸美术馆夏令时 表演 zwjFLC05115 View" [ref=e469] [cursor=pointer]:
+          - /url: /view/20230713%E8%A5%BF%E5%B2%B8%E7%BE%8E%E6%9C%AF%E9%A6%86%E5%A4%8F%E4%BB%A4%E6%97%B6-%E8%A1%A8%E6%BC%94-zwjflc05115/
+          - img "西岸美术馆夏令时 表演 zwjFLC05115 View" [ref=e472]
+        - link "码头 View" [ref=e473] [cursor=pointer]:
+          - /url: /view/20221112%E7%A0%81%E5%A4%B4/
+          - img "码头 View" [ref=e476]
+      - generic [ref=e477]:
+        - link "Lhasa View" [ref=e478] [cursor=pointer]:
+          - /url: /view/20250630lhasa-62-/
+          - img "Lhasa View" [ref=e481]
+        - link "Lhasa View" [ref=e482] [cursor=pointer]:
+          - /url: /view/20250626lhasa-135-/
+          - img "Lhasa View" [ref=e485]
+        - link "Lhasa View" [ref=e486] [cursor=pointer]:
+          - /url: /view/20250626lhasa-255-/
+          - img "Lhasa View" [ref=e489]
+        - link "Lhasa View" [ref=e490] [cursor=pointer]:
+          - /url: /view/20250626lhasa-309-/
+          - img "Lhasa View" [ref=e493]
+        - link "Lhasa View" [ref=e494] [cursor=pointer]:
+          - /url: /view/20250626lhasa-351-/
+          - img "Lhasa View" [ref=e497]
+        - link "Lhasa View" [ref=e498] [cursor=pointer]:
+          - /url: /view/20250626lhasa-46-/
+          - img "Lhasa View" [ref=e501]
+        - link "Lhasa View" [ref=e502] [cursor=pointer]:
+          - /url: /view/20250626lhasa-94-/
+          - img "Lhasa View" [ref=e505]
+        - link "lombok View" [ref=e506] [cursor=pointer]:
+          - /url: /view/20250106lombok-157/
+          - img "lombok View" [ref=e509]
+        - link "lombok View" [ref=e510] [cursor=pointer]:
+          - /url: /view/20250106lombok-191/
+          - img "lombok View" [ref=e513]
+        - link "lombok View" [ref=e514] [cursor=pointer]:
+          - /url: /view/20250106lombok-71/
+          - img "lombok View" [ref=e517]
+        - link "Lombok View" [ref=e518] [cursor=pointer]:
+          - /url: /view/20250104lombok-4/
+          - img "Lombok View" [ref=e521]
+        - link "Lombok View" [ref=e522] [cursor=pointer]:
+          - /url: /view/20250103lombok-84/
+          - img "Lombok View" [ref=e525]
+        - link "Malang View" [ref=e526] [cursor=pointer]:
+          - /url: /view/20241230malang-new-year-74/
+          - img "Malang View" [ref=e529]
+        - link "Yogyakarta View" [ref=e530] [cursor=pointer]:
+          - /url: /view/20241227yogyakarta-248/
+          - img "Yogyakarta View" [ref=e533]
+        - link "Yogyakarta View" [ref=e534] [cursor=pointer]:
+          - /url: /view/20241227yogyakarta-76/
+          - img "Yogyakarta View" [ref=e537]
+        - link "Krabi View" [ref=e538] [cursor=pointer]:
+          - /url: /view/20241219krabi-phiphi-19/
+          - img "Krabi View" [ref=e541]
+        - link "Krabi View" [ref=e542] [cursor=pointer]:
+          - /url: /view/20241219krabi-phiphi-39/
+          - img "Krabi View" [ref=e545]
+        - link "Chumphon View" [ref=e546] [cursor=pointer]:
+          - /url: /view/20241218chumphon-111/
+          - img "Chumphon View" [ref=e549]
+        - link "Chumphon View" [ref=e550] [cursor=pointer]:
+          - /url: /view/20241218chumphon-74/
+          - img "Chumphon View" [ref=e553]
+        - link "Ayutthaya View" [ref=e554] [cursor=pointer]:
+          - /url: /view/20241216ayutthaya-228/
+          - img "Ayutthaya View" [ref=e557]
+        - link "Bangkok View" [ref=e558] [cursor=pointer]:
+          - /url: /view/20241213bangkok-1215ayutthaya-149/
+          - img "Bangkok View" [ref=e561]
+        - link "澳门hellokitty View" [ref=e562] [cursor=pointer]:
+          - /url: /view/20241103-%E6%BE%B3%E9%97%A8hellokitty-3/
+          - img "澳门hellokitty View" [ref=e565]
+        - link "View" [ref=e566] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-331/
+          - img "View" [ref=e569]
+        - link "View" [ref=e570] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-58/
+          - img "View" [ref=e573]
+        - link "View" [ref=e574] [cursor=pointer]:
+          - /url: /view/20241009-%E9%A6%99%E6%B8%AF-98/
+          - img "View" [ref=e577]
+        - link "香港与西兰花 View" [ref=e578] [cursor=pointer]:
+          - /url: /view/20240929%E9%A6%99%E6%B8%AF%E4%B8%8E%E8%A5%BF%E5%85%B0%E8%8A%B1-pdm_5925/
+          - img "香港与西兰花 View" [ref=e581]
+        - link "香港与西兰花 View" [ref=e582] [cursor=pointer]:
+          - /url: /view/20240929%E9%A6%99%E6%B8%AF%E4%B8%8E%E8%A5%BF%E5%85%B0%E8%8A%B1-pdm_5966/
+          - img "香港与西兰花 View" [ref=e585]
+        - link "澳门路环 View" [ref=e586] [cursor=pointer]:
+          - /url: /view/20240925%E6%BE%B3%E9%97%A8%E8%B7%AF%E7%8E%AF-pdm_5368/
+          - img "澳门路环 View" [ref=e589]
+        - link "澳门路环 View" [ref=e590] [cursor=pointer]:
+          - /url: /view/20240925%E6%BE%B3%E9%97%A8%E8%B7%AF%E7%8E%AF-pdm_5539/
+          - img "澳门路环 View" [ref=e593]
+        - link "澳门烟花 View" [ref=e594] [cursor=pointer]:
+          - /url: /view/20240914%E6%BE%B3%E9%97%A8%E7%83%9F%E8%8A%B1-pdm_5006/
+          - img "澳门烟花 View" [ref=e597]
+        - link "广州佛山 View" [ref=e598] [cursor=pointer]:
+          - /url: /view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4315/
+          - img "广州佛山 View" [ref=e601]
+        - link "广州佛山 View" [ref=e602] [cursor=pointer]:
+          - /url: /view/20240911%E5%B9%BF%E5%B7%9E%E4%BD%9B%E5%B1%B1-pdm_4444/
+          - img "广州佛山 View" [ref=e605]
+        - link "Macau大潭山 View" [ref=e606] [cursor=pointer]:
+          - /url: /view/20240905macau%E5%A4%A7%E6%BD%AD%E5%B1%B1-pdm_4017/
+          - img "Macau大潭山 View" [ref=e609]
+        - link "黑吉辽 View" [ref=e610] [cursor=pointer]:
+          - /url: /view/20231122%E9%BB%91%E5%90%89%E8%BE%BD-262/
+          - img "黑吉辽 View" [ref=e613]
+        - link "Shanghai View" [ref=e614] [cursor=pointer]:
+          - /url: /view/20231015-11/
+          - img "Shanghai View" [ref=e617]
+        - link "上海西岸 View" [ref=e618] [cursor=pointer]:
+          - /url: /view/20230815-%E4%B8%8A%E6%B5%B7%E8%A5%BF%E5%B2%B8-ps5_3713/
+          - img "上海西岸 View" [ref=e621]
+        - link "Shanghai View" [ref=e622] [cursor=pointer]:
+          - /url: /view/20230218-5/
+          - img "Shanghai View" [ref=e625]
+        - link "铁马冰河入梦来 View" [ref=e626] [cursor=pointer]:
+          - /url: /view/20220902%E9%93%81%E9%A9%AC%E5%86%B0%E6%B2%B3%E5%85%A5%E6%A2%A6%E6%9D%A5/
+          - img "铁马冰河入梦来 View" [ref=e629]
+    - generic [ref=e630]: ©All rights reserved.

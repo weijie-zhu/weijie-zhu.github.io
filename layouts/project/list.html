@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="project-list">
+    {{ $projects := .Pages.ByDate.Reverse }}
+    {{ if gt (len $projects) 0 }}
+        {{ range $projects }}
+        <div class="project-list-item">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <div class="project-list-meta">
+                {{ .Date.Format "January 2, 2006" }}
+                {{ with .Params.status }} • {{ . }}{{ end }}
+                {{ with .Params.role }} • {{ . }}{{ end }}
+            </div>
+            {{ with .Params.description }}
+            <p class="project-list-desc">{{ . }}</p>
+            {{ else }}
+                {{ with .Summary }}
+                <p class="project-list-desc">{{ . }}</p>
+                {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
+    {{ else }}
+        <p>No projects yet.</p>
+    {{ end }}
+</div>
+{{ end }}
+

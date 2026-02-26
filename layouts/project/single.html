@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div class="post-content project-content">
+    <a class="back-link" href="/project/" aria-label="Go back" title="Go back" onclick="if (history.length > 1) { history.back(); return false; }">&#8592;</a>
+    <h1 class="post-title">{{ .Title }}</h1>
+    <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+
+    <div class="project-meta">
+        {{ with .Params.status }}<span class="project-chip">Status: {{ . }}</span>{{ end }}
+        {{ with .Params.role }}<span class="project-chip">Role: {{ . }}</span>{{ end }}
+        {{ with .Params.year }}<span class="project-chip">Year: {{ . }}</span>{{ end }}
+        {{ with .Params.stack }}
+            {{ range . }}<span class="project-chip">{{ . }}</span>{{ end }}
+        {{ end }}
+    </div>
+
+    {{ with .Params.cover }}
+        {{ $coverPath := . }}
+        {{ $cover := resources.Get $coverPath }}
+        {{ if $cover }}
+            {{ $coverWeb := $cover.Resize "1400x webp q82" }}
+            <div class="project-cover">
+                <img src="{{ $coverWeb.RelPermalink }}" alt="{{ $.Title }}" width="{{ $coverWeb.Width }}" height="{{ $coverWeb.Height }}" loading="eager" decoding="async">
+            </div>
+        {{ else }}
+            <div class="project-cover">
+                <img src="{{ $coverPath | relURL }}" alt="{{ $.Title }}" loading="eager" decoding="async">
+            </div>
+        {{ end }}
+    {{ end }}
+
+    <div class="project-links">
+        {{ with .Params.demo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Live Demo</a>{{ end }}
+        {{ with .Params.repo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Repository</a>{{ end }}
+        {{ with .Params.links }}
+            {{ range . }}
+                {{ $label := .name | default .label | default "Link" }}
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ $label }}</a>
+            {{ end }}
+        {{ end }}
+    </div>
+
+    {{ with .Params.gallery }}
+    <div class="project-gallery">
+        {{ range . }}
+            {{ $path := . }}
+            {{ $img := resources.Get $path }}
+            {{ if $img }}
+                {{ $thumb := $img.Resize "900x webp q80" }}
+                <img src="{{ $thumb.RelPermalink }}" alt="{{ $.Title }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" loading="lazy" decoding="async">
+            {{ else }}
+                <img src="{{ $path | relURL }}" alt="{{ $.Title }}" loading="lazy" decoding="async">
+            {{ end }}
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ .Content }}
+</div>
+{{ end }}

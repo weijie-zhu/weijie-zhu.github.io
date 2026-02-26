@@ -30,7 +30,11 @@
                     src="{{ $image.RelPermalink }}"
                     alt="{{ $.Title }}"
                     class="photo-image"
-                    loading="lazy"
+                    width="{{ $image.Width }}"
+                    height="{{ $image.Height }}"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
                 >
             {{ else }}
                 <img src="{{ . }}" alt="{{ $.Title }}" class="photo-image">

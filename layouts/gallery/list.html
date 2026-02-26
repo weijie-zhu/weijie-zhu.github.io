@@ -10,23 +10,23 @@
                     {{ $original := resources.Get . }}
                     {{ if $original }}
                         {{ $thumbnail := $original.Resize "600x jpg q80" }}
-                        {{ $placeholder := $original.Resize "20x jpg q20" }}
                         {{ $isAboveFold := lt $index 8 }}
                         <div class="image-wrapper">
-                            <img class="gallery-img gallery-img-loading"
-                                 src="{{ $placeholder.RelPermalink }}"
-                                 data-src="{{ $thumbnail.RelPermalink }}"
-                                 alt="{{ $.Title }}"
+                            <img class="gallery-img"
+                                 src="{{ $thumbnail.RelPermalink }}"
+                                 alt="{{ $photo.Title }}"
                                  width="{{ $thumbnail.Width }}"
                                  height="{{ $thumbnail.Height }}"
-                                 {{ if not $isAboveFold }}loading="lazy"{{ end }}>
+                                 decoding="async"
+                                 {{ if $isAboveFold }}fetchpriority="high"{{ end }}
+                                 loading="eager">
                         </div>
                     {{ else }}
-                        <div class="image-wrapper">
+                        <div class="image-wrapper image-loaded">
                             <img class="gallery-img"
-                                 src="{{ . }}"
-                                 alt="{{ $.Title }}"
-                                 loading="lazy">
+                                 src="{{ . | relURL }}"
+                                 alt="{{ $photo.Title }}"
+                                 loading="eager">
                         </div>
                     {{ end }}
                 {{ end }}
@@ -41,42 +41,46 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.gallery-img-loading');
-    let loadedCount = 0;
-    const totalImages = images.length;
+    const grid = document.getElementById('gallery-grid');
+    if (!grid) return;
 
-    // Load images progressively
-    images.forEach((img, index) => {
-        const src = img.dataset.src;
-        if (!src) return;
+    const originalItems = Array.from(grid.querySelectorAll('.gallery-item'));
+    if (originalItems.length === 0) return;
 
-        // Prioritize first 8 images (above fold)
-        if (index < 8) {
-            img.src = src;
+    const getColumnCount = () => window.matchMedia('(min-width: 768px)').matches ? 4 : 2;
+
+    const renderMasonry = () => {
+        const columnCount = getColumnCount();
+        const fragment = document.createDocumentFragment();
+        const columns = [];
+
+        for (let i = 0; i < columnCount; i++) {
+            const column = document.createElement('div');
+            column.className = 'gallery-column';
+            fragment.appendChild(column);
+            columns.push(column);
         }
 
-        // When image loads, remove blur
-        img.onload = function() {
-            loadedCount++;
-            img.classList.remove('gallery-img-loading');
-            img.classList.add('gallery-img-loaded');
-        };
+        originalItems.forEach((item, index) => {
+            columns[index % columnCount].appendChild(item);
+        });
 
-        // Use Intersection Observer for lazy loading the rest
-        if (index >= 8 && 'IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        img.src = src;
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { rootMargin: '100px' });
-            observer.observe(img);
-        } else if (index >= 8) {
-            // Fallback for browsers without IntersectionObserver
-            img.src = src;
-        }
+        grid.replaceChildren(fragment);
+    };
+
+    let lastColumnCount = getColumnCount();
+    renderMasonry();
+
+    let resizeTimer = null;
+    window.addEventListener('resize', function() {
+        window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(function() {
+            const current = getColumnCount();
+            if (current !== lastColumnCount) {
+                lastColumnCount = current;
+                renderMasonry();
+            }
+        }, 120);
     });
 });
 </script>

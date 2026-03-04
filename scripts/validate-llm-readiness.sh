@@ -22,12 +22,28 @@ for file in "${required_outputs[@]}"; do
 done
 
 echo "[validate] Checking front matter quality"
-missing_desc=$(rg --files content | rg '\.md$' | while read -r f; do
+if command -v rg >/dev/null 2>&1; then
+  list_md_files() {
+    rg --files "$1" | grep -E '\.md$'
+  }
+  file_has_pattern() {
+    rg -q "$1" "$2"
+  }
+else
+  list_md_files() {
+    find "$1" -type f -name '*.md' | sort
+  }
+  file_has_pattern() {
+    grep -Eq "$1" "$2"
+  }
+fi
+
+missing_desc=$(list_md_files content | while read -r f; do
   [[ "$f" == "content/ai-policy.md" ]] && continue
-  if rg -q '^draft:\s*true' "$f"; then
+  if file_has_pattern '^draft:[[:space:]]*true' "$f"; then
     continue
   fi
-  if ! rg -q '^description:\s*".+"' "$f"; then
+  if ! file_has_pattern '^description:[[:space:]]*".+"' "$f"; then
     echo "$f"
   fi
 done)
@@ -38,16 +54,16 @@ if [[ -n "$missing_desc" ]]; then
   exit 1
 fi
 
-missing_summary=$(rg --files content | rg '\.md$' | while read -r f; do
+missing_summary=$(list_md_files content | while read -r f; do
   [[ "$f" == "content/ai-policy.md" ]] && continue
-  if rg -q '^draft:\s*true' "$f"; then
+  if file_has_pattern '^draft:[[:space:]]*true' "$f"; then
     continue
   fi
   # View/photo pages can use description only; summary is optional there.
   if [[ "$f" == content/view/* ]]; then
     continue
   fi
-  if ! rg -q '^summary:\s*".+"' "$f"; then
+  if ! file_has_pattern '^summary:[[:space:]]*".+"' "$f"; then
     echo "$f"
   fi
 done)
@@ -58,8 +74,8 @@ if [[ -n "$missing_summary" ]]; then
   exit 1
 fi
 
-missing_view_desc=$(rg --files content/view | rg '\.md$' | while read -r f; do
-  if ! rg -q '^description:\s*".+"' "$f"; then
+missing_view_desc=$(list_md_files content/view | while read -r f; do
+  if ! file_has_pattern '^description:[[:space:]]*".+"' "$f"; then
     echo "$f"
   fi
 done)

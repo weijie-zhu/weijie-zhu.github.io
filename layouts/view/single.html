@@ -1,3 +1,5 @@
 {{ define "main" }}
-{{ partial "photo.html" . }}
-{{ end }} 
+<article aria-label="{{ .Title }}">
+    {{ partial "photo.html" . }}
+</article>
+{{ end }}

@@ -18,6 +18,7 @@ gallery:
   - "images/20250104Lombok-71.jpg"
   - "images/20250106lombok-240.jpg"
   - "images/20250113KotaKinabalu-45.jpg"
+summary: "A fast portfolio rebuild focused on mobile readability and image performance."
 ---
 
 ## Problem

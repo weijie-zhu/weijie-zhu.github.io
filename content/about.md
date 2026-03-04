@@ -1,5 +1,8 @@
 ---
 title: "About"
+description: "About Weijie Zhu, a Shanghai-based photographer sharing thoughts, photos, and collaborations."
+summary: "Personal introduction, motivation for building this site, and contact information for photography and collaboration."
+content_lang: "en"
 ---
 
 Welcome to my personal space. This is where I share my thoughts, photos, and experiences.
@@ -19,4 +22,3 @@ If you want to:
 Feel free to contact me:
 - WeChat: nubilous7
 - Email: teruzz77@gmail.com
-

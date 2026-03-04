@@ -1,0 +1,42 @@
+{{- $pages := where .Site.RegularPages "Params.noindex" "ne" true -}}
+{{- $pages = $pages.ByDate.Reverse -}}
+{{- $policyPath := .Site.Params.aiPolicyUrl | default "/ai-policy/" -}}
+{{- $policyURL := $policyPath | absURL -}}
+Site: {{ .Site.Title }}
+Base URL: {{ .Site.BaseURL }}
+Description: {{ .Site.Params.siteDescription | default .Site.Title }}
+Owner: {{ .Site.Params.author | default .Site.Title }}
+
+AI Usage Policy
+- Indexing and assistant retrieval: allowed
+- Model training and fine-tuning on full content: not allowed without permission
+- Policy URL: {{ $policyURL }}
+
+Machine-Readable Full Corpus
+{{- range $pages }}
+{{- $summary := .Params.description | default .Description | default .Params.summary | default (.Summary | plainify) | default "No summary provided." }}
+{{- $textBody := .Plain | default .RawContent | plainify | replaceRE "\\s+" " " | strings.TrimSpace }}
+{{- if eq .Section "view" }}
+{{- $photoLine := printf "%s | %s | %s" (.Params.location | default "Unknown location") (.Date.Format "2006-01") (.Params.description | default $summary) }}
+{{- $textBody = printf "%s\n%s" $photoLine $textBody }}
+{{- end }}
+
+---
+Title: {{ .Title }}
+Section: {{ .Section | default "page" }}
+URL: {{ .Permalink }}
+Published: {{ .Date.Format "2006-01-02" }}
+Updated: {{ .Lastmod.Format "2006-01-02" }}
+Language: {{ .Params.content_lang | default $.Site.Params.defaultLang | default $.Site.LanguageCode | default "en" }}
+Summary: {{ $summary | plainify | replaceRE "\\s+" " " | truncate 280 }}
+{{- with .Params.image }}
+Image: {{ . | absURL }}
+{{- end }}
+Content:
+{{- if $textBody }}
+{{ $textBody }}
+{{- else }}
+No body text.
+{{- end }}
+
+{{- end }}

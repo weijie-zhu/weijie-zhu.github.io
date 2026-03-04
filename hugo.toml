@@ -3,6 +3,30 @@
 baseURL = 'https://weijie-zhu.github.io/'
 languageCode = 'en-us'
 title = "Ju"
+[outputs]
+  home = ["HTML", "RSS", "LLMS", "LLMSFULL"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[outputFormats.LLMS]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.LLMSFULL]
+  mediaType = "text/plain"
+  baseName = "llms-full"
+  isPlainText = true
+  notAlternative = true
+
+[params]
+  siteDescription = "Personal website of Weijie Zhu: photography, projects, and writing."
+  defaultImage = "images/home.jpg"
+  author = "Weijie Zhu"
+  defaultLang = "en"
+  aiPolicyUrl = "/ai-policy/"
 
 # Navigation menu items
 [menu]

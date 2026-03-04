@@ -13,6 +13,7 @@ gallery:
   - "images/202312encu-胶片.jpg"
   - "images/20200606楼中剪影小幅.jpg"
   - "images/20220902铁马冰河入梦来.jpg"
+summary: "A repeatable workflow for scanning, naming, and color balancing film rolls."
 ---
 
 ## Why This Exists

@@ -19,6 +19,7 @@ gallery:
   - "images/20250626lhasa-351-.jpg"
   - "images/20250630lhasa-133-.jpg"
   - "images/20250701lhasa-57-.jpg"
+summary: "A visual narrative project turning a Tibet trip into a compact photo book."
 ---
 
 ## Overview

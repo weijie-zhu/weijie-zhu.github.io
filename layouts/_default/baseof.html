@@ -1,9 +1,84 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{- $pageLang := .Params.content_lang | default .Site.Params.defaultLang | default .Site.LanguageCode | default "en" -}}
+{{- $siteDesc := .Site.Params.siteDescription | default .Site.Title -}}
+{{- $pageDesc := .Description | default .Params.summary | default (cond .IsPage (.Summary | plainify) $siteDesc) -}}
+{{- $pageDesc = $pageDesc | plainify | truncate 180 -}}
+{{- $isNoIndex := .Params.noindex | default false -}}
+{{- $robots := "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" -}}
+{{- if $isNoIndex }}{{ $robots = "noindex,nofollow" }}{{ end -}}
+{{- $rawImage := .Params.cover | default .Params.image | default .Site.Params.defaultImage -}}
+{{- $ogImage := "" -}}
+{{- if $rawImage }}{{ $ogImage = $rawImage | absURL }}{{ end -}}
+{{- $ogType := "website" -}}
+{{- if .IsPage }}{{ $ogType = "article" }}{{ end -}}
+<html lang="{{ $pageLang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ $pageDesc }}">
+    <meta name="author" content="{{ .Site.Params.author | default .Site.Title }}">
+    <meta name="robots" content="{{ $robots }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:type" content="{{ $ogType }}">
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:description" content="{{ $pageDesc }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ with $ogImage }}<meta property="og:image" content="{{ . }}">{{ end }}
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta name="twitter:description" content="{{ $pageDesc }}">
+    {{ with $ogImage }}<meta name="twitter:image" content="{{ . }}">{{ end }}
+
+    {{- $sameAs := slice -}}
+    {{- range .Site.Params.social.list -}}
+        {{- with .url -}}
+            {{- $sameAs = $sameAs | append . -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $person := dict
+        "@context" "https://schema.org"
+        "@type" "Person"
+        "name" (.Site.Params.author | default .Site.Title)
+        "url" .Site.BaseURL
+    -}}
+    {{- if gt (len $sameAs) 0 -}}
+        {{- $person = merge $person (dict "sameAs" $sameAs) -}}
+    {{- end -}}
+    <script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+
+    {{ if .IsHome }}
+        {{- $website := dict
+            "@context" "https://schema.org"
+            "@type" "WebSite"
+            "name" .Site.Title
+            "url" .Site.BaseURL
+            "description" $siteDesc
+            "inLanguage" $pageLang
+        -}}
+        <script type="application/ld+json">{{ $website | jsonify | safeJS }}</script>
+    {{ else if .IsPage }}
+        {{- $schemaType := "CreativeWork" -}}
+        {{- if eq .Section "blog" }}{{ $schemaType = "BlogPosting" }}{{ end -}}
+        {{- $pageSchema := dict
+            "@context" "https://schema.org"
+            "@type" $schemaType
+            "headline" .Title
+            "description" $pageDesc
+            "url" .Permalink
+            "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+            "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+            "inLanguage" $pageLang
+            "author" (dict "@type" "Person" "name" (.Site.Params.author | default .Site.Title))
+        -}}
+        {{- if $ogImage -}}
+            {{- $pageSchema = merge $pageSchema (dict "image" $ogImage) -}}
+        {{- end -}}
+        <script type="application/ld+json">{{ $pageSchema | jsonify | safeJS }}</script>
+    {{ end }}
 
     <!-- All styles are defined here for simplicity -->
     <style>
@@ -702,6 +777,11 @@
             font-weight: 300;
             z-index: 10;
         }
+
+        .copyright a {
+            color: rgba(255, 255, 255, 0.72);
+            text-decoration: underline;
+        }
     </style>
 
     <script>
@@ -755,7 +835,7 @@
         <main class="content">
             {{ block "main" . }}{{ end }}
             
-            <div class="copyright">©All rights reserved.</div>
+            <div class="copyright">©All rights reserved. <a href="{{ .Site.Params.aiPolicyUrl | default "/ai-policy/" | relURL }}">AI usage policy</a></div>
         </main>
     </div>
 </body>

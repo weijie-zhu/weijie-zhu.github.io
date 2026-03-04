@@ -1,11 +1,16 @@
 {{ define "main" }}
-<div class="post-content">
+<article class="post-content">
     <a class="back-link" href="/blog/" aria-label="Go back" title="Go back" onclick="if (history.length > 1) { history.back(); return false; }">&#8592;</a>
-    <h1 class="post-title">{{ .Title }}</h1>
-    <div class="post-date">
-        {{ .Date.Format "January 2, 2006" }}
-        {{ if .Params.author }} • {{ .Params.author }}{{ end }}
-    </div>
+    <header>
+        <h1 class="post-title">{{ .Title }}</h1>
+        {{ with (.Description | default .Params.summary) }}
+        <p>{{ . }}</p>
+        {{ end }}
+        <div class="post-date">
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ if .Params.author }} • {{ .Params.author }}{{ end }}
+        </div>
+    </header>
     {{ .Content }}
-</div>
+</article>
 {{ end }}

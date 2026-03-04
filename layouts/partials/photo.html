@@ -9,8 +9,12 @@
 
 {{ $prevIndex := sub $currentIndex 1 }}
 {{ $nextIndex := add $currentIndex 1 }}
-{{ $prevPage := index $photos $prevIndex }}
-{{ $nextPage := index $photos $nextIndex }}
+{{ $prevPage := "" }}
+{{ $nextPage := "" }}
+{{ if ge $prevIndex 0 }}{{ $prevPage = index $photos $prevIndex }}{{ end }}
+{{ if lt $nextIndex (len $photos) }}{{ $nextPage = index $photos $nextIndex }}{{ end }}
+{{ $altText := .Params.alt | default (.Params.description | default .Title) }}
+{{ $photoSummary := .Params.summary | default (.Params.description | default (printf "Photo captured in %s." (.Params.location | default "an unknown location"))) }}
 
 <div class="photo-container">
     <div class="photo-image-container">
@@ -28,7 +32,7 @@
                            (max-width: 800px) 800px,
                            1200px"
                     src="{{ $image.RelPermalink }}"
-                    alt="{{ $.Title }}"
+                    alt="{{ $altText }}"
                     class="photo-image"
                     width="{{ $image.Width }}"
                     height="{{ $image.Height }}"
@@ -37,7 +41,7 @@
                     decoding="async"
                 >
             {{ else }}
-                <img src="{{ . }}" alt="{{ $.Title }}" class="photo-image">
+                <img src="{{ . }}" alt="{{ $altText }}" class="photo-image">
             {{ end }}
         {{ end }}
     
@@ -50,9 +54,7 @@
     </div>
     
     <div class="photo-description">
-        <p>{{ .Params.location }} · {{ .Date.Format "2006-01" }}</p>
-        {{ with .Params.description }}
-        <p>{{ . }}</p>
-        {{ end }}
+        <p>{{ .Params.location }} · <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01" }}</time></p>
+        <p>{{ $photoSummary }}</p>
     </div>
 </div> 

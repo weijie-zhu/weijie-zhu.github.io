@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://weijie-zhu.github.io/sitemap.xml

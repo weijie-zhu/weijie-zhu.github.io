@@ -1,0 +1,24 @@
+{{- $pages := where .Site.RegularPages "Params.noindex" "ne" true -}}
+{{- $pages = $pages.ByDate.Reverse -}}
+{{- $policyPath := .Site.Params.aiPolicyUrl | default "/ai-policy/" -}}
+{{- $policyURL := $policyPath | absURL -}}
+Site: {{ .Site.Title }}
+Base URL: {{ .Site.BaseURL }}
+Description: {{ .Site.Params.siteDescription | default .Site.Title }}
+Owner: {{ .Site.Params.author | default .Site.Title }}
+
+AI Usage Policy
+- Indexing and assistant retrieval: allowed
+- Model training and fine-tuning on full content: not allowed without permission
+- Policy URL: {{ $policyURL }}
+
+All Public Pages
+{{- range $pages }}
+{{- $summary := .Params.description | default .Description | default .Params.summary | default (.Summary | plainify) | default "No summary provided." }}
+- [{{ .Section | default "page" }}] {{ .Title }}
+  URL: {{ .Permalink }}
+  Date: {{ .Date.Format "2006-01-02" }}
+  Language: {{ .Params.content_lang | default $.Site.Params.defaultLang | default $.Site.LanguageCode | default "en" }}
+  Summary: {{ $summary | plainify | replaceRE "\\s+" " " | truncate 240 }}
+
+{{- end }}

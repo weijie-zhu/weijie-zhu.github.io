@@ -34,8 +34,6 @@ Le Chiffre (ironically "the number" in French) is a 30% ortholinear keyboard des
 
 ## Images
 
-![Le Chiffre PCB and case](/images/project_blog_images/DIY_keyboard/Le-chiffre-DIY-keyboard-4.JPEG)
-
 ## References
 
 - [GitHub - tominabox1/Le-Chiffre-Keyboard](https://github.com/tominabox1/Le-Chiffre-Keyboard)

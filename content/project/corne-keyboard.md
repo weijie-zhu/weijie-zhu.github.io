@@ -45,10 +45,6 @@ The Corne keyboard (CRKBD - Corne Keyboard) is a popular split ergonomic keyboar
 
 ## Images
 
-![Corne keyboard single half](/images/project_blog_images/DIY_keyboard/corne-DIY-keyboard-5.jpg)
-![Corne keyboard left hand](/images/project_blog_images/DIY_keyboard/corne-DIY-keyboard-8.jpg)
-![Corne keyboard full split](/images/project_blog_images/DIY_keyboard/corne-DIY-keyboard-9.jpg)
-
 ## References
 
 - [KeymapDB - Corne Keymaps](https://keymapdb.com/)

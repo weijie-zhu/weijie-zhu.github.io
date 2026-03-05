@@ -47,12 +47,6 @@ The Ferris Sweep (often just called "Sweep") is a 34-key split keyboard designed
 
 ## Images
 
-![Sweep keyboard on fabric](/images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-10.jpg)
-![Sweep keyboard single half](/images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-11.jpg)
-![Sweep keyboard blue case](/images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-12.jpg)
-![Sweep keyboard PCB](/images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-13.jpg)
-![Sweep keyboard dual micro](/images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-18.jpg)
-
 ## References
 
 - [GitHub - Ferris Keyboard](https://github.com/pierrechevalier83/ferris)

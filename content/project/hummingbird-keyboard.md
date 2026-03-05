@@ -46,10 +46,6 @@ The Hummingbird is a 30-key ergonomic split keyboard designed for extreme portab
 
 ## Images
 
-![Hummingbird keyboard PCB front](/images/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-16.jpg)
-![Hummingbird keyboard with controller](/images/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-17.jpg)
-![Hummingbird keyboard full view](/images/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-19.jpg)
-
 ## References
 
 - [GitHub - rowanclarke/hummingbird](https://github.com/rowanclarke/hummingbird)

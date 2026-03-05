@@ -47,13 +47,6 @@ The Alice layout is an ergonomic keyboard design that has gained popularity for 
 
 ## Images
 
-![Alice keyboard PCB top view](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-1.JPG)
-![Alice keyboard PCB detail](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-2.JPG)
-![Alice keyboard PCB back](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-3.JPG)
-![Alice keyboard assembled side view](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-7.jpg)
-![Alice keyboard bottom plate](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-14.jpg)
-![Alice keyboard full build](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-15.JPG)
-
 ## References
 
 - [Understanding Alice Layout](https://awekeys.com/blogs/news/understanding-alice-layout-and-arisu-layout-keyboards-in-the-mechanical-keyboard-community)

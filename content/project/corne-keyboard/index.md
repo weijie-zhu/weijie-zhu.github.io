@@ -7,7 +7,6 @@ start: 2025-01-15
 role: "DIY Builder"
 year: "2025"
 stack: ["QMK", "ZMK", "Ergonomic", "Split Keyboard"]
-cover: "corne-DIY-keyboard-5.jpg"
 summary: "A compact 42-key split ergonomic keyboard with columnar layout, designed for efficient typing and reduced hand strain."
 ---
 

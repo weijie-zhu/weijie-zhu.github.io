@@ -7,7 +7,6 @@ start: 2024-03-01
 role: "DIY Builder"
 year: "2024"
 stack: ["QMK", "Ortholinear", "Pro Micro"]
-cover: "Le-chiffre-DIY-keyboard-4.JPEG"
 summary: "A compact 30% ortholinear keyboard build with QMK firmware, featuring a minimalist layout for efficient typing."
 ---
 

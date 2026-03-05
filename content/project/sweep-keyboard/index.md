@@ -7,7 +7,6 @@ start: 2025-01-01
 role: "DIY Builder"
 year: "2025"
 stack: ["QMK", "ZMK", "Pro Micro", "Split Keyboard"]
-cover: "sweep-DIY-keyboard-10.jpg"
 summary: "A 34-key split ergonomic keyboard with curved layout, designed for efficient typing with minimal finger travel while maintaining full functionality through layers."
 ---
 

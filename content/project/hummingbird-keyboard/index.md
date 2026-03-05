@@ -7,7 +7,6 @@ start: 2024-06-01
 role: "DIY Builder"
 year: "2024"
 stack: ["ZMK", "nRF52840", "Wireless", "Ultra-compact"]
-cover: "hummingbird-DIY-keyboard-16.jpg"
 summary: "An ultra-compact 30-key split ergonomic keyboard with wireless capability, featuring the distinctive Hummingbird layout for minimal hand movement."
 ---
 

@@ -7,7 +7,6 @@ start: 2025-02-01
 role: "DIY Builder"
 year: "2025"
 stack: ["QMK", "Ergonomic", "Alice Layout"]
-cover: "alice-DIY-keyboard-1.JPG"
 summary: "A custom ergonomic Alice-layout keyboard with split angled design, promoting natural hand and wrist positioning during typing."
 ---
 

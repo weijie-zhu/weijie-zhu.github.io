@@ -7,13 +7,13 @@ start: 2025-01-01
 role: "DIY Builder"
 year: "2025"
 stack: ["QMK", "ZMK", "Pro Micro", "Split Keyboard"]
-cover: "images/sweep-DIY-keyboard-10.jpg"
+cover: "images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-10.jpg"
 gallery:
-  - "images/sweep-DIY-keyboard-10.jpg"
-  - "images/sweep-DIY-keyboard-11.jpg"
-  - "images/sweep-DIY-keyboard-12.jpg"
-  - "images/sweep-DIY-keyboard-13.jpg"
-  - "images/sweep-DIY-keyboard-18.jpg"
+  - "images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-10.jpg"
+  - "images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-11.jpg"
+  - "images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-12.jpg"
+  - "images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-13.jpg"
+  - "images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-18.jpg"
 summary: "A 34-key split ergonomic keyboard with curved layout, designed for efficient typing with minimal finger travel while maintaining full functionality through layers."
 ---
 
@@ -47,11 +47,11 @@ The Ferris Sweep (often just called "Sweep") is a 34-key split keyboard designed
 
 ## Images
 
-![Sweep keyboard on fabric](../assets/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-10.jpg)
-![Sweep keyboard single half](../assets/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-11.jpg)
-![Sweep keyboard blue case](../assets/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-12.jpg)
-![Sweep keyboard PCB](../assets/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-13.jpg)
-![Sweep keyboard dual micro](../assets/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-18.jpg)
+![Sweep keyboard on fabric](/images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-10.jpg)
+![Sweep keyboard single half](/images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-11.jpg)
+![Sweep keyboard blue case](/images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-12.jpg)
+![Sweep keyboard PCB](/images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-13.jpg)
+![Sweep keyboard dual micro](/images/project_blog_images/DIY_keyboard/sweep-DIY-keyboard-18.jpg)
 
 ## References
 

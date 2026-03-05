@@ -7,9 +7,9 @@ start: 2024-03-01
 role: "DIY Builder"
 year: "2024"
 stack: ["QMK", "Ortholinear", "Pro Micro"]
-cover: "images/Le-chiffre-DIY-keyboard-4.JPEG"
+cover: "images/project_blog_images/DIY_keyboard/Le-chiffre-DIY-keyboard-4.JPEG"
 gallery:
-  - "images/Le-chiffre-DIY-keyboard-4.JPEG"
+  - "images/project_blog_images/DIY_keyboard/Le-chiffre-DIY-keyboard-4.JPEG"
 summary: "A compact 30% ortholinear keyboard build with QMK firmware, featuring a minimalist layout for efficient typing."
 ---
 
@@ -34,7 +34,7 @@ Le Chiffre (ironically "the number" in French) is a 30% ortholinear keyboard des
 
 ## Images
 
-![Le Chiffre PCB and case](../assets/project_blog_images/DIY_keyboard/Le-chiffre-DIY-keyboard-4.JPEG)
+![Le Chiffre PCB and case](/images/project_blog_images/DIY_keyboard/Le-chiffre-DIY-keyboard-4.JPEG)
 
 ## References
 

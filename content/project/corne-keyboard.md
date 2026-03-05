@@ -7,11 +7,11 @@ start: 2025-01-15
 role: "DIY Builder"
 year: "2025"
 stack: ["QMK", "ZMK", "Ergonomic", "Split Keyboard"]
-cover: "images/corne-DIY-keyboard-5.jpg"
+cover: "images/project_blog_images/DIY_keyboard/corne-DIY-keyboard-5.jpg"
 gallery:
-  - "images/corne-DIY-keyboard-5.jpg"
-  - "images/corne-DIY-keyboard-8.jpg"
-  - "images/corne-DIY-keyboard-9.jpg"
+  - "images/project_blog_images/DIY_keyboard/corne-DIY-keyboard-5.jpg"
+  - "images/project_blog_images/DIY_keyboard/corne-DIY-keyboard-8.jpg"
+  - "images/project_blog_images/DIY_keyboard/corne-DIY-keyboard-9.jpg"
 summary: "A compact 42-key split ergonomic keyboard with columnar layout, designed for efficient typing and reduced hand strain."
 ---
 
@@ -45,9 +45,9 @@ The Corne keyboard (CRKBD - Corne Keyboard) is a popular split ergonomic keyboar
 
 ## Images
 
-![Corne keyboard single half](../assets/project_blog_images/DIY_keyboard/corne-DIY-keyboard-5.jpg)
-![Corne keyboard left hand](../assets/project_blog_images/DIY_keyboard/corne-DIY-keyboard-8.jpg)
-![Corne keyboard full split](../assets/project_blog_images/DIY_keyboard/corne-DIY-keyboard-9.jpg)
+![Corne keyboard single half](/images/project_blog_images/DIY_keyboard/corne-DIY-keyboard-5.jpg)
+![Corne keyboard left hand](/images/project_blog_images/DIY_keyboard/corne-DIY-keyboard-8.jpg)
+![Corne keyboard full split](/images/project_blog_images/DIY_keyboard/corne-DIY-keyboard-9.jpg)
 
 ## References
 

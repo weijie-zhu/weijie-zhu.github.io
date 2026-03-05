@@ -7,15 +7,15 @@ start: 2025-02-01
 role: "DIY Builder"
 year: "2025"
 stack: ["QMK", "Ergonomic", "Alice Layout"]
-cover: "images/alice-DIY-keyboard-1.JPG"
+cover: "images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-1.JPG"
 gallery:
-  - "images/alice-DIY-keyboard-1.JPG"
-  - "images/alice-DIY-keyboard-2.JPG"
-  - "images/alice-DIY-keyboard-3.JPG"
-  - "images/alice-DIY-keyboard-6.jpg"
-  - "images/alice-DIY-keyboard-7.jpg"
-  - "images/alice-DIY-keyboard-14.jpg"
-  - "images/alice-DIY-keyboard-15.JPG"
+  - "images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-1.JPG"
+  - "images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-2.JPG"
+  - "images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-3.JPG"
+  - "images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-6.jpg"
+  - "images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-7.jpg"
+  - "images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-14.jpg"
+  - "images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-15.JPG"
 summary: "A custom ergonomic Alice-layout keyboard with split angled design, promoting natural hand and wrist positioning during typing."
 ---
 
@@ -47,12 +47,12 @@ The Alice layout is an ergonomic keyboard design that has gained popularity for 
 
 ## Images
 
-![Alice keyboard PCB top view](../assets/project_blog_images/DIY_keyboard/alice-DIY-keyboard-1.JPG)
-![Alice keyboard PCB detail](../assets/project_blog_images/DIY_keyboard/alice-DIY-keyboard-2.JPG)
-![Alice keyboard PCB back](../assets/project_blog_images/DIY_keyboard/alice-DIY-keyboard-3.JPG)
-![Alice keyboard assembled side view](../assets/project_blog_images/DIY_keyboard/alice-DIY-keyboard-7.jpg)
-![Alice keyboard bottom plate](../assets/project_blog_images/DIY_keyboard/alice-DIY-keyboard-14.jpg)
-![Alice keyboard full build](../assets/project_blog_images/DIY_keyboard/alice-DIY-keyboard-15.JPG)
+![Alice keyboard PCB top view](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-1.JPG)
+![Alice keyboard PCB detail](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-2.JPG)
+![Alice keyboard PCB back](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-3.JPG)
+![Alice keyboard assembled side view](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-7.jpg)
+![Alice keyboard bottom plate](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-14.jpg)
+![Alice keyboard full build](/images/project_blog_images/DIY_keyboard/alice-DIY-keyboard-15.JPG)
 
 ## References
 

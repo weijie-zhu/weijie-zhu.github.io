@@ -7,11 +7,11 @@ start: 2024-06-01
 role: "DIY Builder"
 year: "2024"
 stack: ["ZMK", "nRF52840", "Wireless", "Ultra-compact"]
-cover: "images/hummingbird-DIY-keyboard-16.jpg"
+cover: "images/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-16.jpg"
 gallery:
-  - "images/hummingbird-DIY-keyboard-16.jpg"
-  - "images/hummingbird-DIY-keyboard-17.jpg"
-  - "images/hummingbird-DIY-keyboard-19.jpg"
+  - "images/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-16.jpg"
+  - "images/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-17.jpg"
+  - "images/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-19.jpg"
 summary: "An ultra-compact 30-key split ergonomic keyboard with wireless capability, featuring the distinctive Hummingbird layout for minimal hand movement."
 ---
 
@@ -46,9 +46,9 @@ The Hummingbird is a 30-key ergonomic split keyboard designed for extreme portab
 
 ## Images
 
-![Hummingbird keyboard PCB front](../assets/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-16.jpg)
-![Hummingbird keyboard with controller](../assets/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-17.jpg)
-![Hummingbird keyboard full view](../assets/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-19.jpg)
+![Hummingbird keyboard PCB front](/images/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-16.jpg)
+![Hummingbird keyboard with controller](/images/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-17.jpg)
+![Hummingbird keyboard full view](/images/project_blog_images/DIY_keyboard/hummingbird-DIY-keyboard-19.jpg)
 
 ## References
 

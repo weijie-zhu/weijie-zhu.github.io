@@ -48,3 +48,32 @@
 - `content/project/sweep-keyboard.md` - 34-key curved split keyboard
 
 **Result:** All five keyboard projects now documented at `/content/project/` with complete image galleries and technical documentation.
+
+## 2026-03-05T12:15 Dify Workflow: Apple Notes to Notion
+
+**Problem:** Needed to migrate 267+ Apple Notes to Notion while preserving metadata (creation dates), handling attachments, and maintaining organization.
+
+**Solution:**
+1. Created hybrid local + Dify workflow for automated migration
+2. Built Python scripts for Dropbox attachment upload and JSON preparation
+3. Implemented AI-powered categorization using DeepSeek-V3 via Dify
+4. Added rate-limited Notion API integration for bulk imports
+5. Configured proper .gitignore to exclude sensitive credentials and personal data
+
+**Files created:**
+- `content/project/dify-apple-notes-to-notion.md` - Project documentation
+
+**Result:** Complete migration workflow documented at `/content/project/dify-apple-notes-to-notion.md` with GitHub repository linked.
+
+## 2026-03-05T12:30 Keyboard Project Image Path Fix
+
+**Problem:** Images displayed as "?" because paths were missing `/images/` prefix.
+
+**Solution:**
+1. Copied `project_blog_images` folder to `assets/images/project_blog_images/`
+2. Updated all keyboard markdown files with correct paths: `images/project_blog_images/DIY_keyboard/...`
+
+**Files changed:**
+- All 5 keyboard project markdown files (front matter cover/gallery + inline images)
+
+**Result:** Images now resolve correctly through Hugo's `resources.Get` function.

@@ -1,11 +1,11 @@
 ---
 title: "Le Chiffre Keyboard"
-date: 2024-03-26
+date: 2022-07-22
 description: "A 30% ortholinear DIY keyboard designed by tominabox1 with QMK firmware support."
 status: "Completed"
-start: 2024-03-01
+start: 2022-06-01
 role: "DIY Builder"
-year: "2024"
+year: "2022"
 stack: ["QMK", "Ortholinear", "Pro Micro"]
 summary: "A compact 30% ortholinear keyboard build with QMK firmware, featuring a minimalist layout for efficient typing."
 ---

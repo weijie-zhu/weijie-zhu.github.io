@@ -1,11 +1,11 @@
 ---
 title: "Alice Keyboard"
-date: 2025-02-26
+date: 2022-08-19
 description: "An ergonomic Alice-layout DIY keyboard with split angled design for natural hand positioning."
 status: "Completed"
-start: 2025-02-01
+start: 2022-06-01
 role: "DIY Builder"
-year: "2025"
+year: "2022"
 stack: ["QMK", "Ergonomic", "Alice Layout"]
 summary: "A custom ergonomic Alice-layout keyboard with split angled design, promoting natural hand and wrist positioning during typing."
 ---

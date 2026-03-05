@@ -1,11 +1,11 @@
 ---
 title: "Hummingbird Keyboard"
-date: 2025-02-26
+date: 2022-07-07
 description: "A 30-key minimal ergonomic split keyboard with wireless support and ultra-compact design."
 status: "Completed"
-start: 2024-06-01
+start: 2022-06-01
 role: "DIY Builder"
-year: "2024"
+year: "2022"
 stack: ["ZMK", "nRF52840", "Wireless", "Ultra-compact"]
 summary: "An ultra-compact 30-key split ergonomic keyboard with wireless capability, featuring the distinctive Hummingbird layout for minimal hand movement."
 ---

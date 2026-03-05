@@ -1,11 +1,11 @@
 ---
 title: "Ferris Sweep Keyboard"
-date: 2025-02-26
+date: 2023-03-10
 description: "A 34-key split ergonomic keyboard designed by pierrechevalier83, powered by QMK/ZMK firmware."
 status: "Completed"
-start: 2025-01-01
+start: 2023-01-01
 role: "DIY Builder"
-year: "2025"
+year: "2023"
 stack: ["QMK", "ZMK", "Pro Micro", "Split Keyboard"]
 summary: "A 34-key split ergonomic keyboard with curved layout, designed for efficient typing with minimal finger travel while maintaining full functionality through layers."
 ---

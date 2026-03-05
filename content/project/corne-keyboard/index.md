@@ -1,11 +1,11 @@
 ---
 title: "Corne Keyboard"
-date: 2025-02-26
+date: 2022-06-19
 description: "A 42-key split ergonomic columnar keyboard with QMK/ZMK firmware support."
 status: "Completed"
-start: 2025-01-15
+start: 2022-03-01
 role: "DIY Builder"
-year: "2025"
+year: "2022"
 stack: ["QMK", "ZMK", "Ergonomic", "Split Keyboard"]
 summary: "A compact 42-key split ergonomic keyboard with columnar layout, designed for efficient typing and reduced hand strain."
 ---

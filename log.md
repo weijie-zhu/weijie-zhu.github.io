@@ -28,3 +28,23 @@
 - Auto-deploys on push to main
 
 **Note:** Use Pages (not Workers) for static sites. Workers for dynamic functions.
+
+## 2026-03-05T12:12 DIY Keyboard Project Documentation
+
+**Problem:** Five DIY keyboard builds (Le Chiffre, Alice, Corne, Hummingbird, Sweep) had photos but no structured documentation with technical details.
+
+**Solution:**
+1. Researched each keyboard type using web search (QMK/ZMK firmware, ergonomic features, keymap info)
+2. Analyzed images to identify hardware features (PCB design, controllers, case construction)
+3. Created individual markdown files for each keyboard following existing project format
+4. Included all relevant images with proper relative paths to assets folder
+5. Documented ergonomic benefits, technical specifications, and external references
+
+**Files created:**
+- `content/project/le-chiffre-keyboard.md` - 30% ortholinear keyboard
+- `content/project/alice-keyboard.md` - Ergonomic Alice-layout keyboard
+- `content/project/corne-keyboard.md` - 42-key split columnar keyboard
+- `content/project/hummingbird-keyboard.md` - 30-key ultra-compact wireless keyboard
+- `content/project/sweep-keyboard.md` - 34-key curved split keyboard
+
+**Result:** All five keyboard projects now documented at `/content/project/` with complete image galleries and technical documentation.

@@ -1,11 +1,11 @@
 ---
 title: "Dify Workflow: Apple Notes to Notion"
-date: 2026-03-05
+date: 2025-10-05
 description: "A hybrid local + Dify workflow for migrating Apple Notes to Notion with AI-powered categorization."
 status: "Completed"
-start: 2026-02-01
+start: 2025-10-01
 role: "Workflow Developer"
-year: "2026"
+year: "2025"
 stack: ["Dify", "Python", "Notion API", "Dropbox API", "DeepSeek-V3"]
 cover: ""
 repo: "https://github.com/foyri/apple-notes-to-notion"

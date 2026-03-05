@@ -96,3 +96,35 @@
 - Deleted: `content/project/{le-chiffre,alice,corne,hummingbird,sweep}-keyboard.md`
 
 **Result:** All images now display correctly using Hugo page bundle resources.
+
+## 2026-03-05T13:45 Final Page Bundle Setup
+
+**Problem:** Previous restructuring left images mixed up across folders.
+
+**Solution:**
+1. Cleaned all bundle folders
+2. Recreated all `index.md` files with correct relative image paths
+3. Copied correct images to each bundle from public folder
+4. Removed `.webp` cache files and `.html` build artifacts
+
+**Final structure:**
+```
+content/project/
+├── le-chiffre-keyboard/
+│   ├── index.md
+│   └── Le-chiffre-DIY-keyboard-4.JPEG
+├── alice-keyboard/
+│   ├── index.md
+│   └── alice-DIY-keyboard-*.JPG/jpg (7 images)
+├── corne-keyboard/
+│   ├── index.md
+│   └── corne-DIY-keyboard-*.jpg (3 images)
+├── hummingbird-keyboard/
+│   ├── index.md
+│   └── hummingbird-DIY-keyboard-*.jpg (3 images)
+└── sweep-keyboard/
+    ├── index.md
+    └── sweep-DIY-keyboard-*.jpg (5 images)
+```
+
+**Result:** Page bundles properly configured with inline images using relative paths.

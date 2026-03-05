@@ -77,3 +77,22 @@
 - All 5 keyboard project markdown files (front matter cover/gallery + inline images)
 
 **Result:** Images now resolve correctly through Hugo's `resources.Get` function.
+
+## 2026-03-05T13:20 Keyboard Projects - Page Bundle Restructure
+
+**Problem:** Inline markdown images didn't display because Hugo doesn't auto-process them from `assets/` folder.
+
+**Solution:**
+1. Converted all keyboard projects to Hugo page bundles
+2. Created folder structure: `content/project/[keyboard-name]/index.md`
+3. Copied relevant images into each bundle folder
+4. Removed gallery metadata, using only `cover` + inline images
+5. Inline images now use relative paths (e.g., `![img](image.jpg)`)
+6. Deleted old flat `.md` files
+
+**Files changed:**
+- Created: `content/project/{le-chiffre,alice,corne,hummingbird,sweep}-keyboard/index.md`
+- Created: `content/project/{le-chiffre,alice,corne,hummingbird,sweep}-keyboard/*.jpg`
+- Deleted: `content/project/{le-chiffre,alice,corne,hummingbird,sweep}-keyboard.md`
+
+**Result:** All images now display correctly using Hugo page bundle resources.

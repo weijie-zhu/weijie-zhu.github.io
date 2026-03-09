@@ -16,7 +16,6 @@ summary: "A visualization skill for PRDs and plans with list, force-directed, an
 **GitHub**: https://github.com/foyri/prd_visualization_skill  
 **Install**: `clawhub install prd-visualization-skill` or `npx skills add foyri/prd_visualization_skill`
 
----
 
 ## The Realization: Ideas Don't Exist on a Flat Plane
 
@@ -28,7 +27,6 @@ In reality, ideas and decisions have *weight*. Some are minor implementation det
 
 This is a cognitive mismatch. Our brains don't think in flat lists. We think in **fractals** — structures where the same patterns repeat at different scales.
 
----
 
 ## The Speed Problem
 
@@ -42,7 +40,6 @@ As AI coding agents get faster, this mismatch becomes critical. Claude Code, Cod
 
 I found myself returning to projects after a break and having no idea what had been explored, what had been abandoned, and why certain paths were taken. The context was lost in walls of text.
 
----
 
 ## The Insight: Fractal/Hierarchical Visualization
 
@@ -66,7 +63,6 @@ Semantic analysis — previously requiring human intelligence — is now effortl
 
 This means we can finally build **"full visualization"** — representations that match the true complexity of thought, not simplified versions constrained by human cognitive limits.
 
----
 
 ## The Philosophy: Mimicking Real-World Complexity
 
@@ -81,7 +77,6 @@ This isn't just about making pretty charts. It's about **cognitive alignment** �
 
 My background in architecture and philosophy informs this. Architecture taught me that form follows function, but also that the *representation* of structure affects how we understand it. Philosophy taught me that the map is not the territory — but a better map helps us navigate the territory more effectively.
 
----
 
 ## The Implementation: Start Simple, Build Toward Fractals
 
@@ -102,7 +97,6 @@ These are intentionally simple. They're the foundation. The next step — which 
 
 The skill reads hierarchical JSON (representing PRDs, plans, or any structured thinking) and renders it interactively. No complex setup. No dependencies. Just drop in your data and explore.
 
----
 
 ## Why a Skill, Not Just a Tool?
 
@@ -117,7 +111,6 @@ By making this a skill:
 - The AI can *decide* when visualization is appropriate
 - It becomes part of a larger ecosystem of AI-native tools
 
----
 
 ## Real-World Impact
 
@@ -132,7 +125,6 @@ Visual patterns reveal bottlenecks. When you see a dense cluster of "processing"
 **3. Preserved Context**
 Returning to a project after a break, the visualization immediately reminds me of what was explored, what was decided, and what's left to do. The cognitive load of context-switching is drastically reduced.
 
----
 
 ## The Bigger Picture: Toward Full Visualization
 
@@ -150,7 +142,6 @@ The implications go far beyond PRDs:
 
 I believe this is the start of a new category: **LLM-native visualization**. And I'm exploring whether this could be the foundation for something bigger — perhaps a startup focused on next-generation visualization patterns.
 
----
 
 ### Structure Your PRD as JSON
 
@@ -173,7 +164,6 @@ I believe this is the start of a new category: **LLM-native visualization**. And
 }
 ```
 
----
 
 ## Roadmap
 
@@ -184,7 +174,6 @@ I believe this is the start of a new category: **LLM-native visualization**. And
 
 The Fractal Tree view is the one I'm most excited about. It's where this all comes together — where we move beyond simple hierarchies to representations that truly match the complexity of thought.
 
----
 
 ## Get Started
 
@@ -200,7 +189,6 @@ npx skills add foyri/prd_visualization_skill
 
 **View Source:** https://github.com/foyri/prd_visualization_skill
 
----
 
 *Built with a belief that better representations lead to better thinking. That when we can see the true shape of our ideas, we can build better things.*
 

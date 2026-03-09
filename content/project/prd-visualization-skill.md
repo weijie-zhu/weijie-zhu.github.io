@@ -8,12 +8,6 @@ role: "Builder"
 year: "2026"
 stack: ["JavaScript", "D3.js", "Agent Skills", "JSON"]
 summary: "A visualization skill for PRDs and plans with list, force-directed, and radial views, designed to make decision structure and project context easier to understand."
-repo: "https://github.com/foyri/prd_visualization_skill"
-links:
-  - name: "GitHub"
-    url: "https://github.com/foyri/prd_visualization_skill"
-  - name: "Clawhub Package"
-    url: "https://www.clawhub.dev/"
 ---
 
 ## Overview

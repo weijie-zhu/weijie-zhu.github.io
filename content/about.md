@@ -20,5 +20,4 @@ If you want to:
 - Share interesting things or your insights.
 
 Feel free to contact me:
-- WeChat: nubilous7
 - Email: teruzz77@gmail.com

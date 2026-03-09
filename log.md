@@ -61,9 +61,9 @@
 5. Configured proper .gitignore to exclude sensitive credentials and personal data
 
 **Files created:**
-- `content/project/dify-apple-notes-to-notion.md` - Project documentation
+- `content/project/dify-apple-notes-to-notion/index.md` - Project documentation
 
-**Result:** Complete migration workflow documented at `/content/project/dify-apple-notes-to-notion.md` with GitHub repository linked.
+**Result:** Complete migration workflow documented at `/content/project/dify-apple-notes-to-notion/index.md` with GitHub repository linked.
 
 ## 2026-03-05T12:30 Keyboard Project Image Path Fix
 

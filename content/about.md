@@ -3,6 +3,7 @@ title: "About"
 description: "About Weijie Zhu, a Shanghai-based photographer sharing thoughts, photos, and collaborations."
 summary: "Personal introduction, motivation for building this site, and contact information for photography and collaboration."
 content_lang: "en"
+hide_social: true
 ---
 
 Welcome to my personal space. This is where I share my thoughts, photos, and experiences.

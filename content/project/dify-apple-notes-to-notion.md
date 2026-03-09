@@ -7,9 +7,6 @@ start: 2025-10-01
 role: "Workflow Developer"
 year: "2025"
 stack: ["Dify", "Python", "Notion API", "Dropbox API", "DeepSeek-V3"]
-cover: ""
-repo: "https://github.com/foyri/apple-notes-to-notion"
-gallery: []
 summary: "An automated workflow for migrating Apple Notes to Notion, featuring AI-powered categorization, attachment handling via Dropbox, and metadata preservation."
 ---
 

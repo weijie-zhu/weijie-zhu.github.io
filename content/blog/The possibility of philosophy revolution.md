@@ -13,7 +13,7 @@ Yesterday, while watching the film *Interstellar*, I suddenly thought that a phi
 
 Therefore, in this paper, I aim to explore the possibility of a philosophical revolution akin to the scientific revolutions that have reshaped our understanding of the world and the universe over the past few centuries. In addition, I will examine the impact of the scientific revolution and discuss what an equivalent progress in philosophy might look like and its potential influence.
 
-## **How did the Scientific Revolution reshape humanity’s view of the world?**
+## How did the Scientific Revolution reshape humanity’s view of the world?
 
 Could people living in medieval times have imagined a life fully equipped with advanced technology and the profound insights into the universe that we have now? After reviewing some recorded thoughts and existing works, the answer for the majority of people at that time is simply no. At that point in history, the dominant worldview was TBC (refer to the historical overview of the main philosophical and common-sense views of the world). When compared to the understanding of the world held by educated individuals today, a significant gap becomes apparent.
 

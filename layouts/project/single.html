@@ -23,10 +23,12 @@
     <header>
         <div class="project-single-head">
             <h1 class="post-title project-single-title">
-                <span class="project-status-dot {{ $statusClass }}" aria-hidden="true"></span>
                 {{ .Title }}
             </h1>
-            <div class="project-time-range">{{ $startText }} - {{ $endText }}</div>
+            <div class="project-time-range">
+                {{ $startText }} - {{ $endText }}
+                <span class="project-status-dot {{ $statusClass }}" aria-hidden="true"></span>
+            </div>
         </div>
         {{ with (.Description | default .Params.summary) }}
         <p>{{ . }}</p>

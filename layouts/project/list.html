@@ -25,10 +25,12 @@
         <div class="project-list-item">
             <div class="project-list-head">
                 <h2 class="project-list-title">
-                    <span class="project-status-dot {{ $statusClass }}" aria-hidden="true"></span>
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </h2>
-                <div class="project-time-range">{{ $startText }} - {{ $endText }}</div>
+                <div class="project-time-range">
+                    {{ $startText }} - {{ $endText }}
+                    <span class="project-status-dot {{ $statusClass }}" aria-hidden="true"></span>
+                </div>
             </div>
             <div class="project-list-meta">
                 {{ if $keywords }}

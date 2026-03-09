@@ -36,29 +36,24 @@ title = "Ju"
     weight = 1         # Order in menu (lowest number appears first)
   
   [[menu.main]]
-    name = "View"
-    url = "/view/"    # Changed from /photos/ to /view/
-    weight = 2
-  
-  [[menu.main]]
     name = "Gallery"
     url = "/gallery/"
-    weight = 3
+    weight = 2
   
   [[menu.main]]
     name = "Project"
     url = "/project/"
-    weight = 4
+    weight = 3
 
   [[menu.main]]
     name = "Blog"
     url = "/blog/"
-    weight = 5
+    weight = 4
   
   [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 6
+    weight = 5
 
 [params.social]
   # Icons will be displayed in the order listed here
@@ -74,3 +69,11 @@ title = "Ju"
   [[params.social.list]]
     icon = "bilibili"
     url = "https://space.bilibili.com/142718963/upload/video"
+
+[markup]
+  [markup.highlight]
+    style = "github"
+    noClasses = true
+    lineNos = false
+    codeFences = true
+    guessSyntax = false

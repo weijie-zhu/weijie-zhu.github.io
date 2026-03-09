@@ -1,5 +1,6 @@
 {{ define "main" }}
 <article aria-label="{{ .Title }}">
+    <a class="back-link" href="/gallery/" aria-label="Go back" title="Go back" onclick="if (history.length > 1) { history.back(); return false; }">&#8592;</a>
     {{ partial "photo.html" . }}
 </article>
 {{ end }}

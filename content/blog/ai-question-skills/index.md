@@ -15,7 +15,7 @@ tags: ["AI", "GPT", "Prompt Engineering", "人机交互", "产品设计"]
 
 作为一般的GPT用户，我们是怎么问GPT问题的，GPT又是怎么回答我们的？以下是我设想的想交新朋友的场景。
 
-![示例对话](./images/example-conversation.webp)
+![示例对话](example-conversation.webp)
 
 在这个对话中GPT和用户各自的行为是完全不一样的：
 
@@ -24,11 +24,11 @@ tags: ["AI", "GPT", "Prompt Engineering", "人机交互", "产品设计"]
 
 这就是现在默认GPT窗口的交互方式。
 
-![GPT默认交互流程](./images/gpt-interaction-flow.webp)
+![GPT默认交互流程](gpt-interaction-flow.webp)
 
 而这个交互方式承接于互联网时代搜索框中的交互方式。互联网解决问题的方式：
 
-![搜索框交互流程](./images/search-interaction-flow.webp)
+![搜索框交互流程](search-interaction-flow.webp)
 
 我们对于浏览器的预期是它给我与我输入的关键词相关的内容就够了，我没有指望它替我思考，它还是一个机器。但是对于AI大模型，我总是希望它能更聪明更智能一些。但是延续浏览器中的被动交互方式使得GPT表现地很笨。但这并不是因为现在的大模型本身能力不足，而是默认GPT窗口中的交互方式限制了AI已有能力的发挥。这种现有的默认交互方式我觉得可以概括为太"被动"。
 
@@ -47,7 +47,7 @@ tags: ["AI", "GPT", "Prompt Engineering", "人机交互", "产品设计"]
 
 我通过编写Prompt设计了一个GPTs来使GPT积极主动地与我沟通，在沟通中完成以上两步，高效准确地解决问题。
 
-![ActiveGPT功能设计](./images/activegpt-overview.webp)
+![ActiveGPT功能设计](activegpt-overview.webp)
 
 ### ActiveGPT 功能设计
 
@@ -64,7 +64,7 @@ tags: ["AI", "GPT", "Prompt Engineering", "人机交互", "产品设计"]
 
 对比GPT默认窗口中的交互方式，这里的交互方式可以图解为：
 
-![ActiveGPT交互流程](./images/activegpt-flow.webp)
+![ActiveGPT交互流程](activegpt-flow.webp)
 
 在这一新对话中，用户，Lisa和Jack三者的沟通循环中不断高效准确地解决一个个问题。
 

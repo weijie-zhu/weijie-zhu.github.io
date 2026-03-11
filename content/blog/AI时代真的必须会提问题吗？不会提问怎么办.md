@@ -15,6 +15,8 @@ tags: ["AI", "GPT", "Prompt Engineering", "人机交互", "产品设计"]
 
 作为一般的GPT用户，我们是怎么问GPT问题的，GPT又是怎么回答我们的？以下是我设想的想交新朋友的场景。
 
+![示例对话](./images/example-conversation.webp)
+
 在这个对话中GPT和用户各自的行为是完全不一样的：
 
 - **GPT**：一次性的被动回应
@@ -44,6 +46,8 @@ tags: ["AI", "GPT", "Prompt Engineering", "人机交互", "产品设计"]
 ## 3. 实践：设计一个主动的GPTs来解决一般问题
 
 我通过编写Prompt设计了一个GPTs来使GPT积极主动地与我沟通，在沟通中完成以上两步，高效准确地解决问题。
+
+![ActiveGPT功能设计](./images/activegpt-overview.webp)
 
 ### ActiveGPT 功能设计
 

@@ -81,6 +81,11 @@
         <script type="application/ld+json">{{ $pageSchema | jsonify | safeJS }}</script>
     {{ end }}
 
+    <!-- Google Fonts: Noto Sans SC (Source Han Sans) for Chinese characters -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- All styles are defined here for simplicity -->
     <style>
         /* Reset default styles */
@@ -102,13 +107,22 @@
             --accent-underline: #d9ab8d;
             --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
             --font-sans: "Inter", "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+            --font-chinese: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
         }
 
-        /* Basic page layout */
+        /* Basic page layout - with Chinese font support */
         body {
             background-color: var(--bg);
             color: var(--text);
             font-family: var(--font-serif);
+        }
+
+        /* Use Source Han Sans (Noto Sans SC) for Chinese text */
+        :lang(zh),
+        :lang(zh-CN),
+        :lang(zh-TW),
+        :lang(zh-HK) {
+            font-family: var(--font-chinese);
         }
 
         /* Disable scrolling for home page */
